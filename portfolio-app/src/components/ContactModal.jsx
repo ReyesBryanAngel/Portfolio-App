@@ -40,6 +40,7 @@ const ContactModal = ({ closeModal }) => {
                             <div className='lg:grid grid-cols-2 gap-5'>
                                 <div className='mb-5'>
                                     <TextField
+                                        name='first_name'
                                         size="small"
                                         className='w-full'
                                         label="First Name"
@@ -60,6 +61,7 @@ const ContactModal = ({ closeModal }) => {
                                 </div>
                                 <div className='mb-5'>
                                     <TextField
+                                        name='last_name'
                                         size="small"
                                         className='w-full'
                                         label="Last Name"
@@ -80,6 +82,7 @@ const ContactModal = ({ closeModal }) => {
                                 </div>
                                 <div className='mb-5'>
                                     <TextField
+                                        name='email'
                                         size="small"
                                         className='w-full'
                                         label="Email Address"
@@ -99,7 +102,8 @@ const ContactModal = ({ closeModal }) => {
                                     />
                                 </div>
                                 <div className='mb-5'>
-                                    <TextField 
+                                    <TextField
+                                        name='phone'
                                         size="small"
                                         className='w-full'
                                         label="Phone Number"
@@ -121,6 +125,7 @@ const ContactModal = ({ closeModal }) => {
                             </div>  
                             <div className='mt-5'>
                                 <TextField
+                                    name='message'
                                     className='w-full'
                                     label="Your Message..."
                                     id="message"
