@@ -35,7 +35,7 @@ const ContactModal = ({ closeModal }) => {
                         >
                             <HighlightOffRoundedIcon />
                         </IconButton>
-                        <form>
+                        <form data-netlify="true" onSubmit={clientForm.handleSubmit}>
                             <div className='lg:grid grid-cols-2 gap-5'>
                                 <div className='mb-5'>
                                     <TextField
@@ -142,7 +142,7 @@ const ContactModal = ({ closeModal }) => {
                             </div>
                             <div className='mt-5'>
                                 <DialogActions>
-                                    <Button variant='contained'>Submit</Button>
+                                    <Button type='submit' variant='contained'>Submit</Button>
                                 </DialogActions>
                             </div>
                         </form>
