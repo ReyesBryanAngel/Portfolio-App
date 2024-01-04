@@ -25,6 +25,7 @@ const MainPage = () => {
     const projectsRef = useRef(null);
     const footer = useRef(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const githubLink = "https://github.com/ReyesBryanAngel";
 
     const contactModal = () => {
         setModalOpen(true);
@@ -70,11 +71,13 @@ const MainPage = () => {
                         <Button onClick={contactModal} style={{ borderRadius: "20px" }} variant='outlined'>Reach Out</Button>
                     </div>
                     <div className='mt-3 ml-6'>
-                        <Box 
-                            component="img"
-                            src={GithubLogo}
-                            className='h-8'
-                        />
+                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                            <Box 
+                                component="img"
+                                src={GithubLogo}
+                                className='h-8'
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
