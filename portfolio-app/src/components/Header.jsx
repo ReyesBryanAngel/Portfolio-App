@@ -18,7 +18,6 @@ import ContactModal from './ContactModal';
 const Header = ({ aboutRef, skillsRef, projects, footer }) => {
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    // const [modalOpen, setModalOpen] = useState(false);
 
     const scrolltoAbout = () => {
         if (aboutRef.current) {
@@ -49,15 +48,6 @@ const Header = ({ aboutRef, skillsRef, projects, footer }) => {
     const toggleDrawer = (open) => () => {
       setDrawerOpen(open);
     };
-
-    // const contactModal = () => {
-    //     setDrawerOpen(false)
-    //     setModalOpen(true);
-    // }
-
-    // const closeModal = () => {
-    //     setModalOpen(false);
-    // }
 
     useEffect(() => {
         const handleScroll = () => {
