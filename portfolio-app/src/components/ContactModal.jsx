@@ -35,7 +35,7 @@ const ContactModal = ({ closeModal }) => {
                         >
                             <HighlightOffRoundedIcon />
                         </IconButton>
-                        <form name="message" data-netlify="true" onSubmit={clientForm.handleSubmit}>
+                        <form method="POST" name="message" data-netlify="true" onSubmit={clientForm.handleSubmit}>
                             <div className='lg:grid grid-cols-2 gap-5'>
                                 <div className='mb-5'>
                                     <TextField
