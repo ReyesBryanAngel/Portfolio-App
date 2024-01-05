@@ -3,24 +3,32 @@ import AboutMe from './AboutMe';
 import { Box, Typography, Button} from "@mui/material";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import MyPicture from "../assets/my-picture.png";
-import GithubLogo from "../assets/github.png"
 import Skills from './Skills';
-import ReactLogo from "../assets/react.png"
-import AngularLogo from "../assets/angular.png"
-import LaravelLogo from "../assets/laravel.png"
-import TailwindLogo from "../assets/tailwind.png"
 import Projects from './Projects';
-import ApplyCorporate from "../assets/apply-corporate.jpg"
-import BoAPI from "../assets/bo-api.jpg"
-import Mtci from "../assets/mtci.jpg"
-import Nsrc from "../assets/nsrc.png"
 import Award from './Award';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
+import Contribution from './Contribution';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
+import { ContributionLists, boAPIDescription, mtciDescription, nsrcDescription } from './ContributionLists';
+import { 
+    ReactLogo, 
+    AngularLogo, 
+    LaravelLogo, 
+    TailwindLogo, 
+    WebLogo, 
+    GithubLogo, 
+    MyPicture,
+    BoAPI,
+    Mtci,
+    Nsrc,
+    ApplyCorporate,
+    PostmanLogo,
+    DockerLogo,
+    LinuxLogo
+} from "../assets";
 
 const MainPage = () => {
     const aboutRef = useRef(null);
@@ -32,6 +40,16 @@ const MainPage = () => {
     const [openSnackBar, setOpenSnackBar] = useState(false); 
     const githubLink = "https://github.com/ReyesBryanAngel";
     const { formSubmit, setFormSubmit } =  useData();
+    const skillsData = [
+        { logo: ReactLogo, title: "React", progressValue: 85 },
+        { logo: AngularLogo, title: "Angular", progressValue: 60 },
+        { logo: LaravelLogo, title: "Laravel", progressValue: 75 },
+        { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 65 },
+        { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
+        { logo: PostmanLogo, title: "Postman", progressValue: 85 },
+        { logo: DockerLogo, title: "Docker", progressValue: 60 },
+        { logo: LinuxLogo, title: "Linux", progressValue: 50 },
+      ];
 
     const contactModal = () => {
         setModalOpen(true);
@@ -106,7 +124,7 @@ const MainPage = () => {
                     </Button>
                         <Button onClick={contactModal} sx={{ borderRadius: "20px", width:"140px" }} variant='outlined'>Reach Out</Button>
                     </div>
-                    <div className='mt-3 ml-2'>
+                    <div className='mt-3 ml-1'>
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
                             <Box 
                                 component="img"
@@ -125,84 +143,45 @@ const MainPage = () => {
             <AboutMe aboutRef={aboutRef}/>
             <Typography variant="h4" className='pt-20 text-left'>Skills</Typography>
             <div ref={skillsRef} className="lg:grid grid-cols-4 gap-10">
-                <Skills
-                    logo={ReactLogo} 
-                    title="React"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animi!"
-                />
-                <Skills
-                    logo={AngularLogo} 
-                    title="Angular"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animi!"
-                />
-                <Skills
-                    logo={LaravelLogo} 
-                    title="Laravel"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animi!"
-                />
-                <Skills
-                    header={null}
-                    logo={TailwindLogo} 
-                    title="Tailwind CSS"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animi!"
-                />
+            {skillsData.map((skill, index) => (
+                <Skills key={index} logo={skill.logo} title={skill.title} progressValue={skill.progressValue} />
+            ))}
             </div>
             <Typography variant="h5" className='pt-20 text-left'>Recent Company Projects</Typography>
             <div ref={projectsRef} className="lg:grid grid-cols-3 gap-10">
                 <Projects
                     banner={ApplyCorporate}
                     title={"Apply Corporate Application"}
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animi!"
+                    description={<>
+                        Apply Corporate is an app 
+                        made to accumulate all the data of companies who wants to 
+                        acquire the products of finXp. It compose of different sections
+                        with different fields. Each field ask data such as file uploads, country code,
+                        country, products chosen among available products, and so on. This app uses auto saving, so that
+                        users won&apos;t have to repeat the fields that they&apos;ve filled out already. <br /><br /><br />
+                        <strong>Contribution</strong>
+                        {ContributionLists.map((contribution, index) => (
+                            <Contribution key={index} contribution={contribution} />
+                        ))}
+                    </>}
                     language="React/Laravel"
                 />
                 <Projects
                     banner={BoAPI}
                     title={"Business Onboarding API"}
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animvi!"
+                    description={boAPIDescription}
                     language="Laravel"
                 />
                 <Projects
                     banner={Mtci}
                     title={"Maltese Creditor Identifier"}
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animvi!"
+                    description={mtciDescription}
                     language="Angular/Laravel"
                 />
                 <Projects
                     banner={Nsrc}
                     title={"New Born Screening Application"}
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Totam quisquam doloribus eius recusandae accusantium quis ea, 
-                    eum itaque sint perspiciatis dolorum reprehenderit tenetur 
-                    ducimus laboriosam eos rem doloremque? 
-                    Temporibus, animvi!"
+                    description={nsrcDescription}
                     language="React/Laravel"
                 />
             </div>

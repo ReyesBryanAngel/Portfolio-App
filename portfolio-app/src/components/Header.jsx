@@ -70,7 +70,7 @@ const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
     const showMenu = 'lg:hidden';
 
     return (
-        <div className={`fixed w-full top-0 ${scrolled ? 'bg-blue-100' : ''} transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10`}>
+        <div className={`fixed w-full top-0 ${scrolled ? 'bg-blue-100' : ''} transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10 pr-5`}>
             <Toolbar className='flex justify-between items-center'>
                 <div className='flex items-center'>
                     <Box

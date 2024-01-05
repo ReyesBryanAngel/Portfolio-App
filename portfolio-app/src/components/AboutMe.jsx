@@ -17,15 +17,19 @@ const AboutMe = ({ aboutRef }) => {
                         />
                     </div>
                     <div className='lg:ml-20'>
-                        <Typography className='pt-5 lg:w-96'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Temporibus quasi excepturi vitae corporis ab vel accusamus odio dolorem aliquam.
-                            Aspernatur, possimus neque maxime unde quasi facere corrupti nulla delectus impedit.
+                        <Typography className='pt-5 lg:w-96' sx={{ lineHeight:"30px" }}>
+                        I embarked on my journey as a developer after graduating in 2022. 
+                        I previously worked as a Call Center Agent and Transcriptionist. 
+                        I can confidently state that being a developer is a truly fulfilling career, 
+                        and it has deepened my love for it. I believe that the career path I have 
+                        chosen enables me to harness my full potential
+                        and imbue my work with a lasting sense 
+                        of purpose for years to come. 
                         </Typography>
                     </div>
                 </div>
 
-                <div className='flex flex-col mt-44 lg:flex-row gap-10'>
+                <div className='flex flex-col mt-44 lg:grid grid-cols-2 gap-10 text-left'>
                     <Grid
                         item={true}
                         component={Paper}
@@ -35,11 +39,17 @@ const AboutMe = ({ aboutRef }) => {
                     >
                         <Box>
                             <CodeOffIcon />
-                            <Typography variant="h5">Experience</Typography>
+                            <Typography variant="h5" className="pt-5">Experience</Typography>
                             <Typography className='pt-5'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Temporibus quasi excepturi vitae corporis ab vel accusamus odio dolorem aliquam.
-                                Aspernatur, possimus neque maxime unde quasi facere corrupti nulla delectus impedit.
+                                I landed my first job as a Full Stack Developer on August 2022 at FinXp Ltd.
+                                My responsibilities is to implement user stories and fix arising technical issues.
+                                I was able to acquire some of the best code practices with the help of some of the tools and library
+                                we are using such as sonarcube, jasmine, and PHPunit. 
+                                <br/>
+                                <br/>
+                                I also had a part time job at Unexus Inc. as a Software Engineer.
+                                I mainly got hired to create a web application named New Born Screening using Laravel and React.
+                                For collaboration, I also have knowledge of using Jira, Github and Gitlab as well.
                             </Typography>
                         </Box>
                     </Grid>
@@ -52,11 +62,17 @@ const AboutMe = ({ aboutRef }) => {
                     >
                         <Box>
                             <SchoolIcon />
-                            <Typography variant="h5">Education</Typography>
+                            <Typography variant="h5" className='pt-5'>Education</Typography>
                             <Typography className='pt-5'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Temporibus quasi excepturi vitae corporis ab vel accusamus odio dolorem aliquam.
-                                Aspernatur, possimus neque maxime unde quasi facere corrupti nulla delectus impedit.
+                                <strong>College</strong><br/>
+                                <span>Bachelor of Science in Computer Science</span><br/>
+                                <span>2018 - 2022</span>
+                            </Typography>
+
+                            <Typography className='pt-10'>
+                                <strong>Senior High School</strong><br/>
+                                <span>Science, Technology, Engineering and Mathematics</span><br/>
+                                <span>2015 - 2018</span>
                             </Typography>
                         </Box>
                     </Grid>

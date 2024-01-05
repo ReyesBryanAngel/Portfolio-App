@@ -14,7 +14,7 @@ const Footer = ({ footer }) => {
     
     return (
         <>
-            <div ref={footer} className='flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t bg-blue-100 py-6 text-center md:justify-evenly mt-20'>
+            <div ref={footer} className='flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t bg-blue-100 py-6 text-center md:justify-evenly mt-20 p-3'>
                 <div>
                     <Typography variant='h5'>Contact</Typography>
                     <div className='mt-5 text-left'>
@@ -40,7 +40,8 @@ const Footer = ({ footer }) => {
                     </div>
                 </div>
 
-            </div><Typography className="whitespace-nowrap pt-10">&copy; CoderBryan Portfolio. All Rights Reserved.</Typography>
+            </div>
+            <Typography className="pt-10">&copy; CoderBryan Portfolio. All Rights Reserved.</Typography>
         </>
     )
 }
