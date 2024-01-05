@@ -18,31 +18,58 @@ export const FormikSetter = () => {
         message: yup.string().required('Message is required'),
     })
 
+    const encode = (data) => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+          .join('&')
+    }
+
     const formik = useFormik ({
         initialValues,
         validationSchema,
         validateOnBlur: true,
         enableReinitialize: false,
-        onSubmit: () => {}
+        onSubmit: (values, { setSubmitting }) => {
+        fetch("/", {                                 
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({
+            'form-name': 'message',
+            ...values,
+          }),
+        })
+          .then(() => {
+            alert('Your message has been sent!')
+            setSubmitting(false)
+          })
+          .catch(error => {
+            alert(`${error}`)                            
+            setSubmitting(false)
+          })
+        }
     });
 
     const {
         values,
         touched,
         errors,
+        isSubmitting,
         handleBlur,
         setFieldValue,
         handleChange,
-        handleSubmit
+        handleSubmit,
+        handleReset,
     } = formik;
 
     return {
         values,
         touched,
         errors,
+        isSubmitting,
         handleBlur,
         setFieldValue,
         handleChange,
-        handleSubmit
+        handleSubmit,
+        handleReset
     }
 }
