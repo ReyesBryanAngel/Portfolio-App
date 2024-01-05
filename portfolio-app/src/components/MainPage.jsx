@@ -1,6 +1,8 @@
 import Header from './Header';
 import AboutMe from './AboutMe';
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button} from "@mui/material";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import MyPicture from "../assets/my-picture.png";
 import GithubLogo from "../assets/github.png"
 import Skills from './Skills';
@@ -17,22 +19,38 @@ import Award from './Award';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
 import myResume from "../assets/files/my_resume.pdf"
-import { useState, useRef } from 'react';
+import { useData } from '../context/globalDataProvider';
+import { useState, useRef, useEffect } from 'react';
 
 const MainPage = () => {
     const aboutRef = useRef(null);
     const skillsRef = useRef(null);
     const projectsRef = useRef(null);
+    const home = useRef(null);
     const footer = useRef(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const [openSnackBar, setOpenSnackBar] = useState(false); 
     const githubLink = "https://github.com/ReyesBryanAngel";
+    const { formSubmit, setFormSubmit } =  useData();
 
     const contactModal = () => {
         setModalOpen(true);
+        setFormSubmit(null);
     }
     const closeModal = () => {
         setModalOpen(false);
     }
+
+    const closeSnackBar = () => {
+        setOpenSnackBar(false);
+    }
+
+    useEffect(() => {
+        if (formSubmit !== null) {
+            setOpenSnackBar(true);
+        }
+    }, [formSubmit])
+
     return (
         <div>
             <Header 
@@ -40,8 +58,26 @@ const MainPage = () => {
                 skillsRef={skillsRef}
                 projects={projectsRef}
                 footer={footer}
+                home={home}
             />
-            <div className='flex flex-col justify-center items-center m-10 lg:flex-row mt-28 justify-evenly'>
+            {openSnackBar && (
+                <Snackbar 
+                    open={open} 
+                    autoHideDuration={5000} 
+                    onClose={closeSnackBar} 
+                    anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                >
+                    <MuiAlert
+                        elevation={6}
+                        variant="filled"
+                        onClose={closeSnackBar}
+                        severity="success"
+                    >
+                        Message has been sent succesfully!
+                    </MuiAlert>
+                </Snackbar>
+             )}
+            <div ref={home} className='flex flex-col justify-center items-center m-10 lg:flex-row mt-28 justify-evenly'>
                 <div>
                     <Box
                         component="img"
@@ -81,7 +117,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-            {modalOpen && (
+            {modalOpen && formSubmit === null && (
                 <ContactModal
                     closeModal={closeModal}
                  />

@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
 import { FormikSetter } from './FormikSetter';
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
+import { LoadingButton } from "@mui/lab";
 import { 
-    Button,
     Dialog,
     DialogContent,
     TextField,
@@ -22,7 +21,7 @@ const ContactModal = ({ closeModal }) => {
             >
                 <DialogContent className='w-full md:w-full'>
                     <div className='my-10'>
-                        <Typography variant='h5' className='whitespace-nowrap text-center pb-5'>Send your inquiry</Typography>
+                        <Typography variant='h6' className='whitespace-nowrap text-left pb-5'>Leave a message</Typography>
                         <IconButton
                             aria-label="close"
                             onClick={closeModal}
@@ -36,13 +35,10 @@ const ContactModal = ({ closeModal }) => {
                             <HighlightOffRoundedIcon />
                         </IconButton>
                         <form 
-                            name="message"
+                            name="message"  
                             onSubmit={clientForm.handleSubmit}
                             onReset={clientForm.handleReset}
-                            data-netlify="true"
-                            data-netlify-honeypot='bot-field'
                         >
-                            {/* <input type="hidden" name="form-name" value="message" /> */}
                             <div className='lg:grid grid-cols-2 gap-5'>
                                 <div className='mb-5'>
                                     <TextField
@@ -54,7 +50,7 @@ const ContactModal = ({ closeModal }) => {
                                         id="first_name"
                                         onChange={clientForm.handleChange}
                                         onBlur={clientForm.handleBlur}
-                                        // value={clientForm.values.first_name}
+                                        value={clientForm.values.first_name}
                                         error={
                                             clientForm.touched.first_name &&
                                             Boolean(clientForm.errors.first_name)
@@ -76,7 +72,7 @@ const ContactModal = ({ closeModal }) => {
                                         id="last_name"
                                         onChange={clientForm.handleChange}
                                         onBlur={clientForm.handleBlur}
-                                        // value={clientForm.values.last_name}
+                                        value={clientForm.values.last_name}
                                         error={
                                             clientForm.touched.last_name &&
                                             Boolean(clientForm.errors.last_name)
@@ -98,7 +94,7 @@ const ContactModal = ({ closeModal }) => {
                                         id="email"
                                         onChange={clientForm.handleChange}
                                         onBlur={clientForm.handleBlur}
-                                        // value={clientForm.values.email}
+                                        value={clientForm.values.email}
                                         error={
                                             clientForm.touched.email &&
                                             Boolean(clientForm.errors.email)
@@ -121,7 +117,7 @@ const ContactModal = ({ closeModal }) => {
                                         variant="outlined"
                                         onChange={clientForm.handleChange}
                                         onBlur={clientForm.handleBlur}
-                                        // value={clientForm.values.phone}
+                                        value={clientForm.values.phone}
                                         error={
                                             clientForm.touched.phone &&
                                             Boolean(clientForm.errors.phone)
@@ -142,7 +138,7 @@ const ContactModal = ({ closeModal }) => {
                                     id="message"
                                     onChange={clientForm.handleChange}
                                         onBlur={clientForm.handleBlur}
-                                        // value={clientForm.values.message}
+                                        value={clientForm.values.message}
                                         error={
                                             clientForm.touched.message &&
                                             Boolean(clientForm.errors.message)
@@ -159,7 +155,13 @@ const ContactModal = ({ closeModal }) => {
                             </div>
                             <div className='mt-5'>
                                 <DialogActions>
-                                    <Button type='submit' disabled={clientForm.isSubmitting} variant='contained'>Submit</Button>
+                                    <LoadingButton
+                                        loading={clientForm.isSubmitting}
+                                        type="submit"
+                                        variant='contained'
+                                    >
+                                        Submit
+                                    </LoadingButton>
                                 </DialogActions>
                             </div>
                         </form>

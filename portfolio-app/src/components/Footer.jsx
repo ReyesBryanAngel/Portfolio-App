@@ -26,17 +26,17 @@ const Footer = ({ footer }) => {
                     </div>
                 </div>
                 <div className='mt-5'>
-                    <Typography variant='h5'>Social Media Accounts</Typography>
-                    <div className='mt-5'>
-                    <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
-                        <FacebookIcon className="hover:cursor-pointer"/>
-                    </a>
-                    <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
-                        <InstagramIcon className="hover:cursor-pointer"/>
-                    </a>
-                    <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
-                        <LinkedInIcon className="hover:cursor-pointer"/>
-                    </a>
+                    <Typography variant='h5'>Accounts</Typography>
+                    <div className='flex gap-5 justify-center mt-5'>
+                        <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
+                            <FacebookIcon className="hover:cursor-pointer"/>
+                        </a>
+                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+                            <InstagramIcon className="hover:cursor-pointer"/>
+                        </a>
+                        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
+                            <LinkedInIcon className="hover:cursor-pointer"/>
+                        </a>
                     </div>
                 </div>
 

@@ -1,7 +1,11 @@
 import * as yup from 'yup';
 import { useFormik } from 'formik';
+import { db } from '../firebase';
+import { addDoc, collection } from 'firebase/firestore';
+import { useData } from '../context/globalDataProvider';
 
 export const FormikSetter = () => {
+    const { setFormSubmit } = useData();
     const initialValues = {
         first_name: "",
         last_name: "",
@@ -18,36 +22,22 @@ export const FormikSetter = () => {
         message: yup.string().required('Message is required'),
     })
 
-    const encode = (data) => {
-        return Object.keys(data)
-          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-          .join('&')
-    }
-
-    const formik = useFormik ({
+    const formik = useFormik({
         initialValues,
         validationSchema,
         validateOnBlur: true,
         enableReinitialize: false,
-        onSubmit: (values, { setSubmitting }) => {
-        fetch("/", {                                 
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({
-            'form-name': 'message',
-            ...values,
-          }),
-        })
-          .then(() => {
-            alert('Your message has been sent!')
-            setSubmitting(false)
-          })
-          .catch(error => {
-            alert(`${error}`)                            
-            setSubmitting(false)
-          })
-        }
-    });
+        onSubmit: async (values, { setSubmitting }) => {
+          try {                                                            
+            const res = await addDoc(collection(db, 'contacts'), values);
+            setFormSubmit(res?.id);
+            setSubmitting(false);
+          } catch (error) {
+            alert(error);
+            setSubmitting(false);
+          }
+        },
+      });                                                                                                               
 
     const {
         values,

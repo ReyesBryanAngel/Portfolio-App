@@ -13,9 +13,8 @@ import {
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import MyLogo from "../assets/my-logo.png"
-import ContactModal from './ContactModal';
 
-const Header = ({ aboutRef, skillsRef, projects, footer }) => {
+const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -37,6 +36,12 @@ const Header = ({ aboutRef, skillsRef, projects, footer }) => {
         if (projects.current) {
             setDrawerOpen(false)
             projects.current.scrollIntoView({ behavior: 'smooth' });                               
+        }
+    }
+
+    const scrollToHome = () => {
+        if (home.current) {
+            home.current.scrollIntoView({ behavior: 'smooth' });
         }
     }
     const scrollToFooter = () => {
@@ -70,9 +75,10 @@ const Header = ({ aboutRef, skillsRef, projects, footer }) => {
                 <div className='flex items-center'>
                     <Box
                         component="img"
-                        className='h-24'
+                        className='h-24 hover:cursor-pointer'
                         alt="my logo."
                         src={MyLogo}
+                        onClick={scrollToHome}
                     />
                     <Typography>CoderBryan</Typography>
                 </div>
