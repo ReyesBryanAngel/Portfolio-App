@@ -158,7 +158,7 @@ const MainPage = () => {
                         acquire the products of finXp. It compose of different sections
                         with different fields. Each field ask data such as file uploads, country code,
                         country, products chosen among available products, and so on. This app uses auto saving, so that
-                        users won&apos;t have to repeat the fields that they&apos;ve filled out already. <br /><br /><br />
+                        users won&apos;t have to repeat the fields that they&apos;ve filled out already. <br /><br />
                         <strong>Contribution</strong>
                         {ContributionLists.map((contribution, index) => (
                             <Contribution key={index} contribution={contribution} />

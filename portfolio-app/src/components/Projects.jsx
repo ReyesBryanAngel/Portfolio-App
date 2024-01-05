@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card, Box, Typography, Button } from "@mui/material";
 
-const MAX_HEIGHT = 200;
+const MAX_HEIGHT = 250;
 
 const Projects = ({banner, title, description, language }) => {
     const [expanded, setExpanded] = useState(false);
