@@ -41,7 +41,7 @@ const MainPage = () => {
                 projects={projectsRef}
                 footer={footer}
             />
-            <div className='flex flex-col justify-center items-center m-10 lg:flex-row mt-36 justify-evenly'>
+            <div className='flex flex-col justify-center items-center m-10 lg:flex-row mt-28 justify-evenly'>
                 <div>
                     <Box
                         component="img"
@@ -68,9 +68,9 @@ const MainPage = () => {
                             Download CV
                         </a>
                     </Button>
-                        <Button onClick={contactModal} style={{ borderRadius: "20px" }} variant='outlined'>Reach Out</Button>
+                        <Button onClick={contactModal} sx={{ borderRadius: "20px", width:"140px" }} variant='outlined'>Reach Out</Button>
                     </div>
-                    <div className='mt-3 ml-6'>
+                    <div className='mt-3 ml-2'>
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
                             <Box 
                                 component="img"

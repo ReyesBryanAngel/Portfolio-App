@@ -35,11 +35,18 @@ const ContactModal = ({ closeModal }) => {
                         >
                             <HighlightOffRoundedIcon />
                         </IconButton>
-                        <form method="post" name="message" netlify onSubmit={clientForm.handleSubmit}>
+                        <form 
+                            method="post" 
+                            name="message" 
+                            data-netlify="true" 
+                            onSubmit="submit"
+                            data-netlify-honeypot="bot-field"
+                        >
                             <input type="hidden" name="form-name" value="message" />
                             <div className='lg:grid grid-cols-2 gap-5'>
                                 <div className='mb-5'>
                                     <TextField
+                                        type='text'
                                         name='first_name'
                                         size="small"
                                         className='w-full'
@@ -61,6 +68,7 @@ const ContactModal = ({ closeModal }) => {
                                 </div>
                                 <div className='mb-5'>
                                     <TextField
+                                        type='text'
                                         name='last_name'
                                         size="small"
                                         className='w-full'
@@ -82,6 +90,7 @@ const ContactModal = ({ closeModal }) => {
                                 </div>
                                 <div className='mb-5'>
                                     <TextField
+                                        type='text'
                                         name='email'
                                         size="small"
                                         className='w-full'
@@ -103,6 +112,7 @@ const ContactModal = ({ closeModal }) => {
                                 </div>
                                 <div className='mb-5'>
                                     <TextField
+                                        type='text'
                                         name='phone'
                                         size="small"
                                         className='w-full'
@@ -125,6 +135,7 @@ const ContactModal = ({ closeModal }) => {
                             </div>  
                             <div className='mt-5'>
                                 <TextField
+                                    type='text'
                                     name='message'
                                     className='w-full'
                                     label="Your Message..."
