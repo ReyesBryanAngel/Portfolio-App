@@ -121,7 +121,7 @@ const MainPage = () => {
                             download='my_resume.pdf'
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
-                            Download CV
+                            Download Resume
                         </a>
                     </Button>
                         <Button onClick={contactModal} sx={{ borderRadius: "20px", width:"140px" }} variant='outlined'>Reach Out</Button>
