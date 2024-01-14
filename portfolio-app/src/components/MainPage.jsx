@@ -8,11 +8,10 @@ import Projects from './Projects';
 import Award from './Award';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
-import Contribution from './Contribution';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
-import { ContributionLists, boAPIDescription, mtciDescription, newBornDescription } from './ContributionLists';
+import {  newBornDescription, companyProjectDescription } from './ContributionLists';
 import { 
     ReactLogo, 
     AngularLogo, 
@@ -22,13 +21,9 @@ import {
     GithubLogo, 
     MyPicture,
     BoAPI,
-    Mtci,
-    Nsrc,
-    ApplyCorporate,
     PostmanLogo,
     DockerLogo,
-    LinuxLogo,
-    // NewBorn
+    LinuxLogo
 } from "../assets";
 import NewBorn from "../assets/new-born.jpg";
 
@@ -150,55 +145,33 @@ const MainPage = () => {
             ))}
             </div>
             <Typography variant="h4" className='pt-20 text-left'>Recent Projects</Typography>
-            <div ref={projectsRef} className="lg:grid grid-cols-3 gap-10">
-                <Projects
-                    banner={NewBorn}
-                    title={"New Born Application"}
-                    description={newBornDescription}
-                    language="React/Laravel"
-                    link={
-                        <a 
-                            href='https://sample-project-app.com/'  
-                            style={{ 
-                                color: 'blue', 
-                                textDecoration: 'underline', 
-                                alignSelf: "end" 
-                            }}
-                        >
-                            https://sample-project-app.com/
-                        </a>
-                    }
-                />
-                <Projects
-                    banner={ApplyCorporate}
-                    title={"Apply Corporate Application"}
-                    description={<>
-                        Apply Corporate is an app 
-                        made to accumulate all the data of companies who wants to 
-                        acquire the products of finXp. It compose of different sections
-                        with different fields. Each field ask data such as file uploads, country code,
-                        country, products chosen among available products, and so on. This app uses auto saving, so that
-                        users won&apos;t have to repeat the fields that they&apos;ve filled out already. <br /><br />
-                        <strong>Contribution</strong>
-                        {ContributionLists.map((contribution, index) => (
-                            <Contribution key={index} contribution={contribution} />
-                        ))}
-                    </>}
-                    language="React/Laravel"
-                />
-                <Projects
-                    banner={BoAPI}
-                    title={"Business Onboarding API"}
-                    description={boAPIDescription}
-                    language="Laravel"
-                />
-                <Projects
-                    banner={Mtci}
-                    title={"Maltese Creditor Identifier"}
-                    description={mtciDescription}
-                    language="Angular/Laravel"
-                />
-            </div>
+                <div className='grid lg:grid-cols-2 gap-20 mt-10'>
+                    <Projects
+                        banner={NewBorn}
+                        title={"New Born Application"}
+                        description={newBornDescription}
+                        language="React/Laravel"
+                        link={
+                            <a 
+                                href='https://sample-project-app.com/'  
+                                style={{ 
+                                    color: 'blue', 
+                                    textDecoration: 'underline', 
+                                    alignSelf: "end" 
+                                }}
+                            >
+                                https://sample-project-app.com/
+                            </a>
+                        }
+                    />
+                     <Projects
+                        banner={BoAPI}
+                        title={"Company Projects"}
+                        description={companyProjectDescription}
+                        language="React, Laravel, Angular and other tools."
+                    />
+                </div>
+
             <Award/>
             <Footer footer={footer} />
         </div>

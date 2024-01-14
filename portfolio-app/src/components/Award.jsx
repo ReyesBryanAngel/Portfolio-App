@@ -11,11 +11,11 @@ const Award = () => {
                 <div className="pt-20 flex justify-center">
                     <Box
                         component="img"
-                        style={{ height:"20rem"}}
+                        style={{ height:"20rem", marginBottom:"30px"}}
                         src={FinxpAward} 
                     />
                 </div>
-                <Card className="flex flex-col gap-5 p-5 lg:grid grid-cols-2 gap-5">
+                <Card elevation={4} className="flex flex-col gap-5 p-5 lg:grid grid-cols-2 gap-5">
                     <Box
                         component="img"
                         className="w-full"
