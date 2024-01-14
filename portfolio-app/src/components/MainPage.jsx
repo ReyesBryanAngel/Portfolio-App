@@ -44,11 +44,11 @@ const MainPage = () => {
         { logo: ReactLogo, title: "React", progressValue: 85 },
         { logo: AngularLogo, title: "Angular", progressValue: 60 },
         { logo: LaravelLogo, title: "Laravel", progressValue: 75 },
-        { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 65 },
+        { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
         { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
         { logo: PostmanLogo, title: "Postman", progressValue: 85 },
-        { logo: DockerLogo, title: "Docker", progressValue: 60 },
-        { logo: LinuxLogo, title: "Linux", progressValue: 50 },
+        { logo: DockerLogo, title: "Docker", progressValue: 70 },
+        { logo: LinuxLogo, title: "Linux", progressValue: 60 },
       ];
 
     const contactModal = () => {
