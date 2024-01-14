@@ -15,15 +15,13 @@ export const boAPIDescription =
    This project has become a stepping stone for me to pass the assessment during my internship period.`;
 
 export const mtciDescription = 
-`This is a feature task that is part of a Portal Admin app. 
-Maltese Creditor Identifier allows to calculates creditor identifier using 
-five input fields. The calculation was done using the api, 
+` Maltese Creditor Identifier allows calculation of creditor identifier using 
+five input fields. The calculation was done using the laravel api, 
 and the front end side was responsible for doing the filter,
 submit, and deletion.`;
 
-export const nsrcDescription = 
-`New Born Screening app is a project that aims to save the 
-data of new born babies to the database to send them 
-in centers hospital through a courier. In this app, I also saves the courier information as well as the specimens
-that has results already. All the elevated results of specimens has to repeat the form submission but only to update their records.
-In this application is where I was able to practice being an independent developer because I almost started it from scratch.`
+export const newBornDescription = 
+`New Born application is my sample project built in React, Laravel, and Tailwind. The purpose of this app is to save data of
+new born babies and allow the manipulation of created data all through out the application using the CRUD, notification system,
+and search function. This app has the ability to segregate the records using specimen statuses and filter them from another page
+before navigation. For the authentication system, I have used JWT (JSON Web Tokens) with registration process.`;

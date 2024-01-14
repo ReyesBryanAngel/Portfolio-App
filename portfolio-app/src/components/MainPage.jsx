@@ -12,7 +12,7 @@ import Contribution from './Contribution';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
-import { ContributionLists, boAPIDescription, mtciDescription, nsrcDescription } from './ContributionLists';
+import { ContributionLists, boAPIDescription, mtciDescription, newBornDescription } from './ContributionLists';
 import { 
     ReactLogo, 
     AngularLogo, 
@@ -27,8 +27,10 @@ import {
     ApplyCorporate,
     PostmanLogo,
     DockerLogo,
-    LinuxLogo
+    LinuxLogo,
+    // NewBorn
 } from "../assets";
+import NewBorn from "../assets/new-born.jpg";
 
 const MainPage = () => {
     const aboutRef = useRef(null);
@@ -147,8 +149,26 @@ const MainPage = () => {
                 <Skills key={index} logo={skill.logo} title={skill.title} progressValue={skill.progressValue} />
             ))}
             </div>
-            <Typography variant="h5" className='pt-20 text-left'>Recent Company Projects</Typography>
+            <Typography variant="h4" className='pt-20 text-left'>Recent Projects</Typography>
             <div ref={projectsRef} className="lg:grid grid-cols-3 gap-10">
+                <Projects
+                    banner={NewBorn}
+                    title={"New Born Application"}
+                    description={newBornDescription}
+                    language="React/Laravel"
+                    link={
+                        <a 
+                            href='https://sample-project-app.com/'  
+                            style={{ 
+                                color: 'blue', 
+                                textDecoration: 'underline', 
+                                alignSelf: "end" 
+                            }}
+                        >
+                            https://sample-project-app.com/
+                        </a>
+                    }
+                />
                 <Projects
                     banner={ApplyCorporate}
                     title={"Apply Corporate Application"}
@@ -177,12 +197,6 @@ const MainPage = () => {
                     title={"Maltese Creditor Identifier"}
                     description={mtciDescription}
                     language="Angular/Laravel"
-                />
-                <Projects
-                    banner={Nsrc}
-                    title={"New Born Screening Application"}
-                    description={nsrcDescription}
-                    language="React/Laravel"
                 />
             </div>
             <Award/>

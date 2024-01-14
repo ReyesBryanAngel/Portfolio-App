@@ -41,15 +41,15 @@ const AboutMe = ({ aboutRef }) => {
                             <CodeOffIcon />
                             <Typography variant="h5" className="pt-5">Experience</Typography>
                             <Typography className='pt-5'>
-                                I landed my first job as a Full Stack Developer on August 2022 at FinXp Ltd.
-                                My responsibilities is to implement user stories and fix arising technical issues.
-                                I was able to acquire some of the best code practices with the help of some of the tools and library
-                                we are using such as sonarcube, jasmine, and PHPunit. 
+                                Full Stack Developer at FinXp Ltd. <br/><br/>
+                                My responsibilities are to implement user stories, fix arising technical issues, collaborate with
+                                other developers to discuss what can we improve to produce better features, and strictly follow
+                                project requirements including unit testing. <br/><br/>
+
+                                Full Stack Developer at Unexus Inc.<br/><br/>
+                                I got hired as a developer as well at Unexus to build a full stack web application from scratch. I also
+                                parcticipate with implementing new features and fix arising bugs with their current application.
                                 <br/>
-                                <br/>
-                                I also had a part time job at Unexus Inc. as a Software Engineer.
-                                I mainly got hired to create a web application named New Born Screening using Laravel and React.
-                                For collaboration, I also have knowledge of using Jira, Github and Gitlab as well.
                             </Typography>
                         </Box>
                     </Grid>
