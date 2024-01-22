@@ -164,12 +164,14 @@ const MainPage = () => {
                             </a>
                         }
                     />
-                     <Projects
-                        banner={BoAPI}
-                        title={"Company Projects"}
-                        description={companyProjectDescription}
-                        language="React, Laravel, Angular and other tools."
-                    />
+                    <div ref={projectsRef}>
+                        <Projects
+                            banner={BoAPI}
+                            title={"Company Projects"}
+                            description={companyProjectDescription}
+                            language="React, Laravel, Angular and other tools."
+                        />
+                    </div>  
                 </div>
 
             <Award/>
