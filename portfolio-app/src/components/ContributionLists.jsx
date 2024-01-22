@@ -1,14 +1,15 @@
 export const companyProjectDescription =
-  `To protect the privacy and important information of the company I am working in, 
-  I cannot disclose any confidential information. However,
-  I can share some of the code best practices that I have learn throughout my expreriences 
-  as a Full Stack Developer. Working in my current company allows me to use unit testing library such as PHPunit test and jasmine.
-  I was actively using the jasmine library during the time that I was coding in Angular.
-  I also have the opportunity of enhancing my code using the Sonarcube. With the help of the challenges I've been through, I honed myself
-  with writing reusable and well organized codes that can be used for other incoming projects, especially in React.`;
+  `To protect companies' privacy, I cannot share specific project links or names, 
+  but I can share the virtues I have learned from them. Most of my output and participation 
+  were indulged in company projects. Through these experiences, I was able to learn and adapt 
+  some of the best practices in web application development, utilizing tools such as SonarCube and 
+  unit testing library for ensuring all the implementations are working and bug free. Learning independently 
+  to enhance my skills rapidly is a practice I've been following, but I truly value the importance of teamwork, 
+  as it provides me with the right vision on how I can learn from other approaches to address various technical challenges.`;
 
 export const newBornDescription = 
-`New Born application is my sample project built in React, Laravel, and Tailwind. The purpose of this app is to save data of
-new born babies and allow the manipulation of created data all through out the application using the CRUD, notification system,
-and search function. This app has the ability to segregate the records using specimen statuses and filter them from another page
-before navigation. For the authentication system, I have used JWT (JSON Web Tokens) with registration process.`;
+`The New Born application is built with React, Laravel, and Tailwind. 
+It saves the data of newborn babies and manipulates them using CRUD, a notification 
+system, and a search function. It includes manual courier tracking functionality and 
+employs an OTP verification system for registration process through the user's email account. 
+Additionally, it allows users to reset their password when forgotten.`;

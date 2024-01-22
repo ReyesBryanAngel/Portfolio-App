@@ -44,10 +44,10 @@ const AboutMe = ({ aboutRef }) => {
                                 Full Stack Developer at FinXp Ltd. <br/><br/>
                                 My responsibilities are to implement user stories, fix arising technical issues, collaborate with
                                 other developers to discuss what can we improve to produce better features, and strictly follow
-                                project requirements including unit testing. <br/><br/>
+                                project requirements such as passing Sonarcube code assessment and implementing unit test per task. <br/><br/>
 
                                 Full Stack Developer at Unexus Inc.<br/><br/>
-                                I got hired as a developer as well at Unexus to build a full stack web application from scratch. I also
+                                I got hired as a developer as well at Unexus to build a full stack web application from scratch using React and Laravel. I also
                                 parcticipate with implementing new features and fix arising bugs with their current application.
                                 <br/>
                             </Typography>
@@ -65,14 +65,20 @@ const AboutMe = ({ aboutRef }) => {
                             <Typography variant="h5" className='pt-5'>Education</Typography>
                             <Typography className='pt-5'>
                                 <strong>College</strong><br/>
+                                <span>Emillio Aguinalo College</span><br/>
                                 <span>Bachelor of Science in Computer Science</span><br/>
                                 <span>2018 - 2022</span>
                             </Typography>
-
                             <Typography className='pt-10'>
                                 <strong>Senior High School</strong><br/>
+                                <span>Immaculate Conception Academy</span><br/>
                                 <span>Science, Technology, Engineering and Mathematics</span><br/>
                                 <span>2015 - 2018</span>
+                            </Typography>
+                            <Typography className='pt-10'>
+                                <strong>Elementary</strong><br/>
+                                <span>Nasugbu West Central School</span><br/>
+                                <span>2006 - 2012</span>
                             </Typography>
                         </Box>
                     </Grid>
