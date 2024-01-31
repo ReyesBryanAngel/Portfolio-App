@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import { Card, Box, Typography, Button } from "@mui/material";
+import React from 'react';
+import { Box, Typography } from "@mui/material";
 
 const Projects = ({banner, title, description, language, link }) => {
-
-    const isCompanyProjects = "Company Projects"
-
     return (
         <div className="mt-10">
              <div className="text-left gap-3 w-full">
-                <Box component="img" className="w-80" src={banner} alt="Banner" />
+                <Box component="img" sx={{ width:"400px" }} src={banner} alt="Banner" />
                 <div className="p-3">
                     <Typography className="pt-5" variant="h5">
                     {title}

@@ -1,19 +1,19 @@
 import { Box, Typography, Paper, Grid } from "@mui/material";
-import MyPicture from "../assets/my-picture.png";
 import SchoolIcon from '@mui/icons-material/School';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
+import { AboutPicV3 } from "../assets";
 
 const AboutMe = ({ aboutRef }) => {
     return (
         <>
             <div className='flex flex-col gap-6 mt-56 lg:mt-60' ref={aboutRef}>
                 <Typography variant="h4" className="text-center">About</Typography>
-                <div className='flex flex-col items-center justify-center lg:flex-row'>
+                <div className='flex flex-col items-center justify-center lg:flex-row mt-10'>
                     <div>
                         <Box
                             component="img"
-                            className='h-52 lg:h-72'
-                            src={MyPicture}
+                            className='h-60 lg:h-80'
+                            src={AboutPicV3}
                         />
                     </div>
                     <div className='lg:ml-20'>

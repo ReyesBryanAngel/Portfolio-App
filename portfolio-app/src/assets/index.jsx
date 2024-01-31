@@ -8,7 +8,10 @@ export { default as MyPicture } from "./my-picture.png";
 export { default as BoAPI } from "./bo-api.jpg";
 export { default as Mtci } from "./mtci.jpg";
 export { default as Nsrc } from "./nsrc.png";
-export { default as ApplyCorporate } from "./apply-corporate.jpg";
+export { default as ApplyCorporate } from "./apply-corporate.png";
 export { default as PostmanLogo } from "./postman-logo.png";
 export { default as DockerLogo } from "./docker-logo.png";
 export { default as LinuxLogo } from "./linux-logo.png";
+export { default as PortalAdmin } from "./portal-admin.png";
+export { default as NewBorn } from "./new-born.jpg"
+export { default as AboutPicV3 } from "./about-picV3.jpg"

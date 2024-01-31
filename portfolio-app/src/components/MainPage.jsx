@@ -11,7 +11,7 @@ import ContactModal from './ContactModal';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
-import {  newBornDescription, companyProjectDescription } from './ContributionLists';
+import { newBornDescription, companyProjectDescription, creditorIdentifier, BOAPI } from './ContributionLists';
 import { 
     ReactLogo, 
     AngularLogo, 
@@ -25,7 +25,7 @@ import {
     DockerLogo,
     LinuxLogo
 } from "../assets";
-import NewBorn from "../assets/new-born.jpg";
+import { ApplyCorporate, PortalAdmin, NewBorn } from '../assets';
 
 const MainPage = () => {
     const aboutRef = useRef(null);
@@ -166,10 +166,50 @@ const MainPage = () => {
                     />
                     <div ref={projectsRef}>
                         <Projects
-                            banner={BoAPI}
-                            title={"Company Projects"}
+                            banner={ApplyCorporate}
+                            title={"Apply Corporate"}
                             description={companyProjectDescription}
-                            language="React, Laravel, Angular and other tools."
+                            language="React and Laravel"
+                            link={
+                                <a 
+                                    href='https://apply.finxp.com/'  
+                                    style={{ 
+                                        color: 'blue', 
+                                        textDecoration: 'underline', 
+                                        alignSelf: "end" 
+                                    }}
+                                >
+                                    https://apply.finxp.com/
+                                </a>
+                            }
+                        />
+                    </div>
+                    <div>
+                        <Projects
+                            banner={PortalAdmin}
+                            title={"Maltese Creditor Identfier"}
+                            description={creditorIdentifier}
+                            language="Angular and Laravel"
+                            link={
+                                <a 
+                                    href='https://portal-admin.finxp.com/'  
+                                    style={{ 
+                                        color: 'blue', 
+                                        textDecoration: 'underline', 
+                                        alignSelf: "end" 
+                                    }}
+                                >
+                                    https://portal-admin.finxp.com/
+                                </a>
+                            }
+                        />
+                    </div>
+                    <div>
+                        <Projects
+                            banner={BoAPI}
+                            title={"Business Onboarding API"}
+                            description={BOAPI}
+                            language="Laravel"
                         />
                     </div>  
                 </div>
