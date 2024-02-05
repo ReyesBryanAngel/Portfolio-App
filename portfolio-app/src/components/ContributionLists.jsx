@@ -23,4 +23,4 @@ the API, which is Laravel. Angular is the framework I have used in the frontend 
 export const BOAPI = 
 `Business Onboarding is an API that allow customers to enter company names, members information/position,
 shareholding percentage, and document upload/downlaod. My participation on this project is I implemented conditional required values based on shareholding percentage,
-created some of the api flow structure based on the requirements, write unit testing for eac task and create documentation.`
+created some of the api flow structure based on the requirements, write unit testing for each task and create documentation.`

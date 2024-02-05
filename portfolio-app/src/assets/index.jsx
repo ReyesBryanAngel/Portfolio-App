@@ -14,4 +14,6 @@ export { default as DockerLogo } from "./docker-logo.png";
 export { default as LinuxLogo } from "./linux-logo.png";
 export { default as PortalAdmin } from "./portal-admin.png";
 export { default as NewBorn } from "./new-born.jpg"
-export { default as AboutPicV3 } from "./about-picV3.jpg"
+export { default as AboutPicV3 } from "./about-picV3.jpg";
+export { default as MySql } from "./mysql.png";
+export { default as FastApi } from "./fastapi.png";

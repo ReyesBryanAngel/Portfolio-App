@@ -23,7 +23,8 @@ import {
     BoAPI,
     PostmanLogo,
     DockerLogo,
-    LinuxLogo
+    FastApi,
+    MySql
 } from "../assets";
 import { ApplyCorporate, PortalAdmin, NewBorn } from '../assets';
 
@@ -45,7 +46,8 @@ const MainPage = () => {
         { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
         { logo: PostmanLogo, title: "Postman", progressValue: 85 },
         { logo: DockerLogo, title: "Docker", progressValue: 70 },
-        { logo: LinuxLogo, title: "Linux", progressValue: 60 },
+        { logo: MySql, title: "MySql", progressValue: 65 },
+        { logo: FastApi, title: "FastApi", progressValue: 45 },
       ];
 
     const contactModal = () => {
@@ -169,7 +171,7 @@ const MainPage = () => {
                             banner={ApplyCorporate}
                             title={"Apply Corporate"}
                             description={companyProjectDescription}
-                            language="React and Laravel"
+                            language="React/Laravel"
                             link={
                                 <a 
                                     href='https://apply.finxp.com/'  
