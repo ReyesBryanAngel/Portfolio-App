@@ -154,16 +154,40 @@ const MainPage = () => {
                         description={newBornDescription}
                         language="React/Laravel"
                         link={
-                            <a 
-                                href='https://sample-project-app.com/'  
-                                style={{ 
-                                    color: 'blue', 
-                                    textDecoration: 'underline', 
-                                    alignSelf: "end" 
+                            <>
+                            <a
+                                href='https://sample-project-app.com/'
+                                style={{
+                                    color: 'blue',
+                                    textDecoration: 'underline',
+                                    alignSelf: "end"
                                 }}
                             >
                                 https://sample-project-app.com/
-                            </a>
+                            </a><br /><br />
+                            Source Code: <br />
+                            <a
+                                href='https://github.com/ReyesBryanAngel/Sample-Project-API'
+                                style={{
+                                    color: 'blue',
+                                    textDecoration: 'underline',
+                                    alignSelf: "end"
+                                }}
+                            >
+                                https://github.com/ReyesBryanAngel/Sample-Project-API
+                            </a><br />
+                            <a
+                                href='https://github.com/ReyesBryanAngel/Sample-Project-App'
+                                style={{
+                                    color: 'blue',
+                                    textDecoration: 'underline',
+                                    alignSelf: "end"
+                                }}
+                            >
+                                https://github.com/ReyesBryanAngel/Sample-Project-App
+                            </a><br />
+                            </>
+                        
                         }
                     />
                     <div ref={projectsRef}>
