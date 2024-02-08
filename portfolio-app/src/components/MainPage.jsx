@@ -24,7 +24,8 @@ import {
     PostmanLogo,
     DockerLogo,
     FastApi,
-    MySql
+    MySql,
+    Azure
 } from "../assets";
 import { ApplyCorporate, PortalAdmin, NewBorn } from '../assets';
 
@@ -48,6 +49,7 @@ const MainPage = () => {
         { logo: DockerLogo, title: "Docker", progressValue: 70 },
         { logo: MySql, title: "MySql", progressValue: 65 },
         { logo: FastApi, title: "FastApi", progressValue: 45 },
+        {logo: Azure, title: "Azure", progressValue: 45}
       ];
 
     const contactModal = () => {
