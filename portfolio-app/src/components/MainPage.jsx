@@ -145,7 +145,7 @@ const MainPage = () => {
             ))}
             </div>
             <Typography variant="h5" fontWeight="bold" className='pt-20 text-left'>PORTFOLIO</Typography>
-                <div>
+                <div ref={projectsRef}>
                     <Projects
                         banner={NewBorn}
                         title={"Newborn Screening Application"}
