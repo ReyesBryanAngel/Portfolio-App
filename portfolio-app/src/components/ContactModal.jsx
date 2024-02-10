@@ -9,6 +9,7 @@ import {
     Typography,
     IconButton
 } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 
 const ContactModal = ({ closeModal }) => {
     const clientForm = FormikSetter();
@@ -160,7 +161,7 @@ const ContactModal = ({ closeModal }) => {
                                         type="submit"
                                         variant='contained'
                                     >
-                                        Submit
+                                        <SendIcon />
                                     </LoadingButton>
                                 </DialogActions>
                             </div>

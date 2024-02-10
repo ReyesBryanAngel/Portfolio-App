@@ -1,87 +1,48 @@
-import { Box, Typography, Paper, Grid } from "@mui/material";
-import SchoolIcon from '@mui/icons-material/School';
-import CodeOffIcon from '@mui/icons-material/CodeOff';
+import React, { useState } from 'react';
+import { Box, Typography, Tabs, Tab, Card } from "@mui/material";
 import { AboutPicV3 } from "../assets";
+import Experiences from "./Experiences";
+import { experiences } from "./ContributionLists";
 
 const AboutMe = ({ aboutRef }) => {
     return (
         <>
             <div className='flex flex-col gap-6 mt-56 lg:mt-60' ref={aboutRef}>
-                <Typography variant="h4" className="text-center">About</Typography>
-                <div className='flex flex-col items-center justify-center lg:flex-row mt-10'>
-                    <div>
-                        <Box
-                            component="img"
-                            className='h-60 lg:h-80'
-                            src={AboutPicV3}
-                        />
-                    </div>
-                    <div className='lg:ml-20'>
-                        <Typography className='pt-5 lg:w-96' sx={{ lineHeight:"30px" }}>
-                        I embarked on my journey as a developer after graduating in 2022. 
-                        I previously worked as a Call Center Agent and Transcriptionist. 
-                        I can confidently state that being a developer is a truly fulfilling career, 
-                        and it has deepened my love for it. I believe that the career path I have 
-                        chosen enables me to harness my full potential
-                        and imbue my work with a lasting sense 
-                        of purpose for years to come. 
+                <div className="lg:ml-32">
+                    <Typography variant="h5" fontWeight="bold" className="lg:text-left">ABOUT ME</Typography>
+                </div>
+                
+                <div className='flex flex-col items-center text-left gap-10 justify-center lg:flex-row mt-10'>
+                    <Box
+                        component="img"
+                        className='h-60 lg:h-80'
+                        src={AboutPicV3}
+                    />
+
+                        <Typography className='pt-5 lg:w-1/2' sx={{ lineHeight:"30px" }}>
+                        As a Fullstack Developer, I excel in developing robust full-stack web applications while applying agile
+                         development methodologies for all assigned projects. My expertise lies in crafting reliable and secure 
+                         API structures by writing clean, reusable code across both front-end and back-end platforms, 
+                         utilizing cutting-edge development techniques. Additionally, I am a strong communicator and 
+                         creative problem solver, thriving in collaborative environments 
+                        with cross-functional teams to deliver high-quality services.
                         </Typography>
-                    </div>
+   
                 </div>
 
-                <div className='flex flex-col mt-44 lg:grid grid-cols-2 gap-10 text-left'>
-                    <Grid
-                        item={true}
-                        component={Paper}
-                        elevation={3}
-                        square
-                        className='p-5'
-                    >
-                        <Box>
-                            <CodeOffIcon />
-                            <Typography variant="h5" className="pt-5">Experience</Typography>
-                            <Typography className='pt-5'>
-                                Full Stack Developer at FinXp Ltd. <br/><br/>
-                                My responsibilities are to implement user stories, fix arising technical issues, collaborate with
-                                other developers to discuss what can we improve to produce better features, and strictly follow
-                                project requirements such as passing Sonarcube code assessment and implementing unit test per task. <br/><br/>
-
-                                Full Stack Developer at Unexus Inc.<br/><br/>
-                                I got hired as a developer as well at Unexus to build a full stack web application from scratch using React and Laravel. I also
-                                parcticipate with implementing new features and fix arising bugs with their current application.
-                                <br/>
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid
-                        item={true}
-                        component={Paper}
-                        elevation={3}
-                        square
-                        className='p-5'
-                    >
-                        <Box>
-                            <SchoolIcon />
-                            <Typography variant="h5" className='pt-5'>Education</Typography>
-                            <Typography className='pt-5'>
-                                <strong>College</strong><br/>
-                                <span>Emillio Aguinalo College</span><br/>
-                                <span>Bachelor of Science in Computer Science</span><br/>
-                                <span>2018 - 2022</span>
-                            </Typography>
-                            <Typography className='pt-10'>
-                                <strong>Senior High School</strong><br/>
-                                <span>Immaculate Conception Academy</span><br/>
-                                <span>Science, Technology, Engineering and Mathematics</span><br/>
-                                <span>2015 - 2018</span>
-                            </Typography>
-                            <Typography className='pt-10'>
-                                <strong>Elementary</strong><br/>
-                                <span>Nasugbu West Central School</span><br/>
-                                <span>2006 - 2012</span>
-                            </Typography>
-                        </Box>
-                    </Grid>
+                <div className='flex flex-col mt-44 gap-10 text-left'>
+                    <Typography variant="h5" fontWeight="bold" className="">EXPERIENCES</Typography>
+                    
+                    {experiences.map((experience, index) => (
+                        <Experiences
+                            key={index}
+                            logo={experience.logo}
+                            title={experience.title}
+                            company={experience.company}
+                            description={experience.description}
+                            date={experience.date}
+                        />
+                    ))}
                 </div>
             </div>
         </>

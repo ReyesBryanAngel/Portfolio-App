@@ -12,11 +12,12 @@ import {
     Button
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import MyLogo from "../assets/my-logo.png"
+import { GithubLogo } from "../assets";
 
 const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const githubLink = "https://github.com/ReyesBryanAngel";
 
     const scrolltoAbout = () => {
         if (aboutRef.current) {
@@ -73,14 +74,17 @@ const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
         <div className={`fixed w-full top-0 ${scrolled ? 'bg-blue-100' : ''} transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10 pr-5`}>
             <Toolbar className='flex justify-between items-center'>
                 <div className='flex items-center'>
-                    <Box
-                        component="img"
-                        className='h-24 hover:cursor-pointer'
-                        alt="my logo."
-                        src={MyLogo}
-                        onClick={scrollToHome}
-                    />
-                    <Typography>CoderBryan</Typography>
+                    <div>
+                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                            <Box 
+                                component="img"
+                                src={GithubLogo}
+                                className='h-7'
+                            />
+                        </a>
+                    </div>
+                    <Typography sx={{ marginLeft:"10px" }} color="textSecondary" variant='h6' fontWeight="bold" fontStyle="italic">Bryan.Dev</Typography>
+                    
                 </div>
                 <div  className={showMenu}>
                     <IconButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>
@@ -88,6 +92,9 @@ const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
                     </IconButton>
                 </div>
                 <Breadcrumbs className={showBreadCrumb} aria-label="breadcrumb">
+                    <Button variant="h6" onClick={scrollToHome}>
+                        Home
+                    </Button>
                     <Button variant="h6" onClick={scrolltoAbout}>
                         About
                     </Button>

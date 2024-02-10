@@ -17,8 +17,8 @@ const Skills = ({logo, title, progressValue}) => {
     }));
 
     return (
-        <div className="mt-10">
-            <Card className=" flex flex-col justify-center items-center p-5 gap-3" elevation={3}>
+        <div className="mt-10 lg:mt-0">
+            <Card className="flex flex-col justify-center items-center p-3 lg:w-56" elevation={2}>
                 <Box
                     component="img"
                     className="h-20 mt-2"

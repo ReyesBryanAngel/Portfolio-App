@@ -1,6 +1,6 @@
 import Header from './Header';
 import AboutMe from './AboutMe';
-import { Box, Typography, Button} from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import Skills from './Skills';
@@ -11,7 +11,9 @@ import ContactModal from './ContactModal';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
-import { newBornDescription, companyProjectDescription, creditorIdentifier, BOAPI } from './ContributionLists';
+import { newBornDescription, companyProjectDescription, creditorIdentifier } from './ContributionLists';
+
+import LaunchIcon from '@mui/icons-material/Launch';
 import { 
     ReactLogo, 
     AngularLogo, 
@@ -20,14 +22,14 @@ import {
     WebLogo, 
     GithubLogo, 
     MyPicture,
-    BoAPI,
     PostmanLogo,
     DockerLogo,
     FastApi,
     MySql,
-    Azure
+    Azure,
+    Mtci
 } from "../assets";
-import { ApplyCorporate, PortalAdmin, NewBorn } from '../assets';
+import { ApplyCorporate, NewBorn } from '../assets';
 
 const MainPage = () => {
     const aboutRef = useRef(null);
@@ -37,13 +39,15 @@ const MainPage = () => {
     const footer = useRef(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [openSnackBar, setOpenSnackBar] = useState(false); 
-    const githubLink = "https://github.com/ReyesBryanAngel";
     const { formSubmit, setFormSubmit } =  useData();
+    const githubLink = "https://github.com/ReyesBryanAngel/Sample-Project-App";
+    const liveDemoLink = "https://sample-project-app.com/login"
+
     const skillsData = [
         { logo: ReactLogo, title: "React", progressValue: 85 },
-        { logo: AngularLogo, title: "Angular", progressValue: 60 },
-        { logo: LaravelLogo, title: "Laravel", progressValue: 75 },
+        { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
         { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
+        { logo: AngularLogo, title: "Angular", progressValue: 60 },
         { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
         { logo: PostmanLogo, title: "Postman", progressValue: 85 },
         { logo: DockerLogo, title: "Docker", progressValue: 70 },
@@ -96,44 +100,36 @@ const MainPage = () => {
                     </MuiAlert>
                 </Snackbar>
              )}
-            <div ref={home} className='flex flex-col justify-center items-center m-10 lg:flex-row mt-28 justify-evenly'>
+            <div ref={home} className='flex flex-col justify-center items-center m-10 lg:flex-row mt-12 lg:mt-36 justify-evenly'>
                 <div>
                     <Box
                         component="img"
-                        className='h-56 lg:h-96'
+                        className='h-56 lg:h-80'
                         alt="my image"
                         src={MyPicture}
                     />
                 </div>
-                <div className='flex flex-col items-center'>
-                    <div className='whitespace-nowrap mt-10'>
-                        <Typography variant="h4" style={{ lineHeight:"3.5rem" }}>Hi, I&apos;m <strong>Bryan</strong><br/>
-                        <strong>Full Stack Developer</strong><br/></Typography>
+                <div className='flex flex-col items-center lg:items-left'>
+                    <div className='lg:items-start lg:text-left space-y-2 mt-5'>
+                        <Typography variant='h3' fontWeight="bold">Fullstack Developer</Typography>
+                        <Typography>Hi, I&apos;m Angel Bryan Reyes, a passionate Fullstack Developer <br/> based in the Philippines.</Typography>
                     </div>
-                    <div className='flex flex-row gap-6 mt-10 whitespace-nowrap'>
-                    <Button
-                        style={{ borderRadius: '20px' }}
-                        variant='contained'
-                    >
-                        <a
-                            href={myResume}
-                            download='my_resume.pdf'
-                            style={{ textDecoration: 'none', color: 'inherit' }}
+                    <div className='flex lg:flex-col gap-3 mt-5 lg:self-start'>
+                        <Button
+                            style={{ borderRadius: '20px' }}
+                            variant='contained'
                         >
-                            Download CV
-                        </a>
-                    </Button>
+                            <a
+                                href={myResume}
+                                download='my_resume.pdf'
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                Download CV
+                            </a>
+                        </Button>
                         <Button onClick={contactModal} sx={{ borderRadius: "20px", width:"140px" }} variant='outlined'>Reach Out</Button>
                     </div>
-                    <div className='mt-3 ml-1'>
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <Box 
-                                component="img"
-                                src={GithubLogo}
-                                className='h-8'
-                            />
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
             {modalOpen && formSubmit === null && (
@@ -142,104 +138,53 @@ const MainPage = () => {
                  />
             )}
             <AboutMe aboutRef={aboutRef}/>
-            <Typography variant="h4" className='pt-20 text-left'>Skills</Typography>
+            <Typography variant="h5" fontWeight="bold" className='pt-20 text-left pb-5'>TECH STACKS</Typography>
             <div ref={skillsRef} className="lg:grid grid-cols-4 gap-10">
             {skillsData.map((skill, index) => (
                 <Skills key={index} logo={skill.logo} title={skill.title} progressValue={skill.progressValue} />
             ))}
             </div>
-            <Typography variant="h4" className='pt-20 text-left'>Recent Projects</Typography>
-                <div className='grid lg:grid-cols-2 gap-20 mt-10'>
+            <Typography variant="h5" fontWeight="bold" className='pt-20 text-left'>PORTFOLIO</Typography>
+                <div>
                     <Projects
                         banner={NewBorn}
-                        title={"New Born Application"}
+                        title={"Newborn Screening Application"}
                         description={newBornDescription}
-                        language="React/Laravel"
-                        link={
-                            <>
-                            <a
-                                href='https://sample-project-app.com/'
-                                style={{
-                                    color: 'blue',
-                                    textDecoration: 'underline',
-                                    alignSelf: "end"
-                                }}
-                            >
-                                https://sample-project-app.com/
-                            </a><br /><br />
-                            Source Code: <br />
-                            <a
-                                href='https://github.com/ReyesBryanAngel/Sample-Project-API'
-                                style={{
-                                    color: 'blue',
-                                    textDecoration: 'underline',
-                                    alignSelf: "end"
-                                }}
-                            >
-                                https://github.com/ReyesBryanAngel/Sample-Project-API
-                            </a><br />
-                            <a
-                                href='https://github.com/ReyesBryanAngel/Sample-Project-App'
-                                style={{
-                                    color: 'blue',
-                                    textDecoration: 'underline',
-                                    alignSelf: "end"
-                                }}
-                            >
-                                https://github.com/ReyesBryanAngel/Sample-Project-App
-                            </a><br />
-                            </>
-                        
+                        code={
+                            <div className='flex gap-5'>
+                                <div className='flex gap-2'>
+                                    <Typography>Code</Typography>
+                                    <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                        <Box 
+                                            component="img"
+                                            src={GithubLogo}
+                                            className='h-6'
+                                        />
+                                    </a>
+                                </div>
+                               
+                                <div className='flex gap-2'>
+                                    <Typography>Live Demo</Typography>
+                                    <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
+                                        <LaunchIcon className="hover:cursor-pointer"/>
+                                    </a>
+                                </div>
+                            </div>
                         }
+                        
                     />
-                    <div ref={projectsRef}>
-                        <Projects
-                            banner={ApplyCorporate}
-                            title={"Apply Corporate"}
-                            description={companyProjectDescription}
-                            language="React/Laravel"
-                            link={
-                                <a 
-                                    href='https://apply.finxp.com/'  
-                                    style={{ 
-                                        color: 'blue', 
-                                        textDecoration: 'underline', 
-                                        alignSelf: "end" 
-                                    }}
-                                >
-                                    https://apply.finxp.com/
-                                </a>
-                            }
-                        />
-                    </div>
-                    <div>
-                        <Projects
-                            banner={PortalAdmin}
-                            title={"Maltese Creditor Identfier"}
-                            description={creditorIdentifier}
-                            language="Angular and Laravel"
-                            link={
-                                <a 
-                                    href='https://portal-admin.finxp.com/'  
-                                    style={{ 
-                                        color: 'blue', 
-                                        textDecoration: 'underline', 
-                                        alignSelf: "end" 
-                                    }}
-                                >
-                                    https://portal-admin.finxp.com/
-                                </a>
-                            }
-                        />
-                    </div>
-                    <div>
-                        <Projects
-                            banner={BoAPI}
-                            title={"Business Onboarding API"}
-                            description={BOAPI}
-                            language="Laravel"
-                        />
-                    </div>  
+                     <Projects
+                        banner={ApplyCorporate}
+                        title={"Apply Corporate Application"}
+                        description={companyProjectDescription}
+                        
+                    />
+                    <Projects
+                        banner={Mtci}
+                        title={"Maltese Creditor Identifier"}
+                        description={creditorIdentifier}
+                        
+                    />
                 </div>
 
             <Award/>
