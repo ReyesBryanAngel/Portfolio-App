@@ -151,25 +151,29 @@ const MainPage = () => {
                         title={"Newborn Screening Application"}
                         description={newBornDescription}
                         code={
-                            <div className='flex gap-5'>
-                                <div className='flex gap-2'>
-                                    <Typography>Code</Typography>
-                                    <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                                        <Box 
-                                            component="img"
-                                            src={GithubLogo}
-                                            className='h-6'
-                                        />
-                                    </a>
+                            <div className='flex flex-col'>
+                                <div className='flex gap-5'>
+                                    <div className='flex gap-2'>
+                                        <Typography>Code</Typography>
+                                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                            <Box
+                                                component="img"
+                                                src={GithubLogo}
+                                                className='h-6' />
+                                        </a>
+                                    </div>
+
+                                    <div className='flex gap-2'>
+                                        <Typography>Live Demo</Typography>
+                                        <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
+                                            <LaunchIcon className="hover:cursor-pointer" />
+                                        </a>
+                                    </div>
                                 </div>
-                               
-                                <div className='flex gap-2'>
-                                    <Typography>Live Demo</Typography>
-                                    <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
-                                        <LaunchIcon className="hover:cursor-pointer"/>
-                                    </a>
+                                    <div className='self-center mt-5'>
+                                        <Typography fontWeight="bold">React&nbsp; &nbsp;Laravel</Typography>
+                                    </div>
                                 </div>
-                            </div>
                         }
                         
                     />
@@ -177,14 +181,30 @@ const MainPage = () => {
                         banner={ApplyCorporate}
                         title={"Apply Corporate Application"}
                         description={companyProjectDescription}
+                        code={
+                            <>
+                                 <div className='self-center'>
+                                    <Typography fontWeight="bold">React&nbsp; &nbsp;Laravel</Typography>
+                                 </div>
+                            </>
+                        }
                         
                     />
                     <Projects
                         banner={Mtci}
                         title={"Maltese Creditor Identifier"}
                         description={creditorIdentifier}
-                        
+                        code={
+                            <>
+                                 <div className='self-center'>
+                                    <Typography fontWeight="bold">Angular&nbsp; &nbsp;Laravel</Typography>
+                                 </div>
+                            </>
+                        }
                     />
+                    <div className='mt-10 border-2 mt-20 py-20 bg-zinc-100'>
+                        <Typography fontWeight="bold" variant='h5'>Ecommerce Website Project Coming soon...</Typography>
+                    </div>
                 </div>
 
             <Award/>
