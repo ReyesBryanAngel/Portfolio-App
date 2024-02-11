@@ -12,7 +12,7 @@ const AboutMe = ({ aboutRef }) => {
                     <Typography variant="h5" fontWeight="bold" className="lg:text-left">ABOUT ME</Typography>
                 </div>
                 
-                <div className='flex flex-col items-center text-left gap-10 justify-center lg:flex-row mt-10'>
+                <div className='flex flex-col items-center lg:text-left gap-10 justify-center lg:flex-row mt-10'>
                     <Box
                         component="img"
                         className='h-60 lg:h-80'

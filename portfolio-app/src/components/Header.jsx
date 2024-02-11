@@ -111,6 +111,9 @@ const Header = ({ aboutRef, skillsRef, projects, footer, home }) => {
             </Toolbar>
             <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
                 <List>
+                    <ListItem button onClick={scrollToHome}>
+                        <ListItemText primary="Home" />
+                    </ListItem>
                     <ListItem button onClick={scrolltoAbout}>
                         <ListItemText primary="About" />
                     </ListItem>
