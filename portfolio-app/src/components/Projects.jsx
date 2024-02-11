@@ -5,7 +5,7 @@ import { GithubLogo } from "../assets";
 const Projects = ({banner, title, description, code }) => {
     return (
         <div className='mt-28'>
-             <div className="flex flex-col lg:flex-row items-center justify-center gap-12 text-left gap-3 w-full">
+             <div className="flex flex-col lg:flex-row items-center justify-evenly gap-12 text-left w-full">
                 <div>
                     <Box component="img" sx={{ maxWidth: "100%", height: "auto", width: "600px" }} src={banner} alt="Banner" />
                 </div>
