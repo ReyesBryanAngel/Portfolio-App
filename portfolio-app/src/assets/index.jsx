@@ -25,3 +25,4 @@ export { default as Dynata } from "./dynata-logo.jpg";
 export {default as CompanyAward } from "./company-award.jpg"
 export { default as CompanyAwardV2 } from "./company-awardv2.jpg"
 export { default as FinxpAward } from "./finxp-award.png"
+export { default as MongoLogo } from "./mongo-logo.png"

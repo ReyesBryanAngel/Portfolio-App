@@ -11,22 +11,13 @@ import ContactModal from './ContactModal';
 import myResume from "../assets/files/my_resume.pdf"
 import { useData } from '../context/globalDataProvider';
 import { useState, useRef, useEffect } from 'react';
-import { newBornDescription, companyProjectDescription, creditorIdentifier } from './ContributionLists';
+import { newBornDescription, companyProjectDescription, creditorIdentifier, skillsData } from './ContributionLists';
+import LinkIcon from '@mui/icons-material/Link';
 
 import LaunchIcon from '@mui/icons-material/Launch';
 import { 
-    ReactLogo, 
-    AngularLogo, 
-    LaravelLogo, 
-    TailwindLogo, 
-    WebLogo, 
     GithubLogo, 
     MyPicture,
-    PostmanLogo,
-    DockerLogo,
-    FastApi,
-    MySql,
-    Azure,
     Mtci
 } from "../assets";
 import { ApplyCorporate, NewBorn } from '../assets';
@@ -41,20 +32,9 @@ const MainPage = () => {
     const [openSnackBar, setOpenSnackBar] = useState(false); 
     const { formSubmit, setFormSubmit } =  useData();
     const githubLink = "https://github.com/ReyesBryanAngel/Sample-Project-App";
-    const liveDemoLink = "https://sample-project-app.com/login"
-
-    const skillsData = [
-        { logo: ReactLogo, title: "React", progressValue: 85 },
-        { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
-        { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
-        { logo: AngularLogo, title: "Angular", progressValue: 60 },
-        { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
-        { logo: PostmanLogo, title: "Postman", progressValue: 85 },
-        { logo: DockerLogo, title: "Docker", progressValue: 70 },
-        { logo: MySql, title: "MySql", progressValue: 65 },
-        { logo: FastApi, title: "FastApi", progressValue: 45 },
-        {logo: Azure, title: "Azure", progressValue: 45}
-      ];
+    const newbornDemoLink = "https://sample-project-app.com/login";
+    const acLink = "https://apply.finxp.com/";
+    const portalLink = "https://portal-admin.finxp.com/";
 
     const contactModal = () => {
         setModalOpen(true);
@@ -165,7 +145,7 @@ const MainPage = () => {
 
                                     <div className='flex gap-2'>
                                         <Typography>Live Demo</Typography>
-                                        <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
+                                        <a href={newbornDemoLink} target="_blank" rel="noopener noreferrer">
                                             <LaunchIcon className="hover:cursor-pointer" />
                                         </a>
                                     </div>
@@ -182,24 +162,33 @@ const MainPage = () => {
                         title={"Apply Corporate Application"}
                         description={companyProjectDescription}
                         code={
-                            <>
+                            <div className='flex flex-col'>
                                  <div className='self-center'>
                                     <Typography fontWeight="bold">React&nbsp; &nbsp;Laravel</Typography>
                                  </div>
-                            </>
+                                 <div className='mr-3'>
+                                    <a href={acLink} target="_blank" rel="noopener noreferrer">
+                                        <LinkIcon color='primary' />
+                                    </a>
+                                 </div>
+                            </div>
                         }
-                        
                     />
                     <Projects
                         banner={Mtci}
                         title={"Maltese Creditor Identifier"}
                         description={creditorIdentifier}
                         code={
-                            <>
+                            <div className='flex flex-col'>
                                  <div className='self-center'>
                                     <Typography fontWeight="bold">Angular&nbsp; &nbsp;Laravel</Typography>
                                  </div>
-                            </>
+                                 <div>
+                                    <a href={portalLink} target="_blank" rel="noopener noreferrer">
+                                        <LinkIcon color='primary' />
+                                    </a>
+                                 </div>
+                            </div>
                         }
                     />
                     <div className='mt-10 border-2 mt-20 py-20 bg-zinc-100'>

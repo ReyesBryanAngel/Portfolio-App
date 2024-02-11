@@ -13,7 +13,7 @@ const Projects = ({banner, title, description, code }) => {
                     <Typography variant="h6" fontWeight="bold">
                         {title}
                     </Typography>
-                    <Typography sx={{ fontSize: "14px", lineHeight: "24px"  }}>
+                    <Typography sx={{ fontSize: "14px", lineHeight: "24px", marginTop:"10px" }}>
                         {description}
                     </Typography>
                     <div className='flex gap-5 mt-5'>

@@ -1,4 +1,17 @@
 import { Finxp, Unexus, Taskus, Dynata } from "../assets";
+import { 
+  ReactLogo, 
+  AngularLogo, 
+  LaravelLogo, 
+  TailwindLogo, 
+  WebLogo, 
+  PostmanLogo,
+  DockerLogo,
+  FastApi,
+  MySql,
+  Azure,
+  MongoLogo
+} from "../assets";
 export const companyProjectDescription =
   `Apply Corporate is an application that allow companies to apply to FinXp as their financial payment solution.
   This app gather several data from the clients and implement complex API and Front End feature integration. This app uses
@@ -70,4 +83,18 @@ export const experiences = [
     to consumer preferences of company products.`,
     date: "July 2020 — November 2020"
   }
-]
+];
+
+export const skillsData = [
+  { logo: ReactLogo, title: "React", progressValue: 85 },
+  { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
+  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
+  { logo: AngularLogo, title: "Angular", progressValue: 60 },
+  { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
+  { logo: PostmanLogo, title: "Postman", progressValue: 85 },
+  { logo: DockerLogo, title: "Docker", progressValue: 70 },
+  { logo: MySql, title: "MySql", progressValue: 65 },
+  { logo: FastApi, title: "Fast API", progressValue: 45 },
+  {logo: Azure, title: "Azure", progressValue: 45},
+  {logo: MongoLogo, title: "MongoDB", progressValue: 45}
+];
