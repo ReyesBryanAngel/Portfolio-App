@@ -8,7 +8,7 @@ const Award = () => {
         <>
             <div className="mt-10">
             <Typography variant="h5" fontWeight="bold" className='pt-20 text-left'>COMPANY PERFORMANCE AWARD</Typography>
-                <div className="pt-20 flex items-start gap-10">
+                <div className="flex flex-col lg:flex-row pt-20 items-start gap-10">
                    
                     <Box
                         component="img"
