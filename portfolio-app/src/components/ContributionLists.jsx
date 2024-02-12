@@ -10,7 +10,8 @@ import {
   FastApi,
   MySql,
   Azure,
-  MongoLogo
+  MongoLogo,
+  PhpLogo
 } from "../assets";
 export const companyProjectDescription =
   `Apply Corporate is an application that allow companies to apply to FinXp as their financial payment solution.
@@ -88,6 +89,7 @@ export const experiences = [
 export const skillsData = [
   { logo: ReactLogo, title: "React", progressValue: 85 },
   { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
+  { logo: PhpLogo, title: "PHP", progressValue: 65 },
   { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
   { logo: AngularLogo, title: "Angular", progressValue: 60 },
   { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
