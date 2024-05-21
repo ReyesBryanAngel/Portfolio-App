@@ -22,8 +22,11 @@ export { default as Finxp } from "./finxp-logo.jpg";
 export { default as Unexus } from "./unexus-logo.png";
 export { default as Taskus } from "./taskus-logo.png";
 export { default as Dynata } from "./dynata-logo.jpg";
-export {default as CompanyAward } from "./company-award.jpg"
-export { default as CompanyAwardV2 } from "./company-awardv2.jpg"
-export { default as FinxpAward } from "./finxp-award.png"
-export { default as MongoLogo } from "./mongo-logo.png"
-export { default as PhpLogo } from "./php-logo.png"
+export {default as CompanyAward } from "./company-award.jpg";
+export { default as CompanyAwardV2 } from "./company-awardv2.jpg";
+export { default as FinxpAward } from "./finxp-award.png";
+export { default as MongoLogo } from "./mongo-logo.png";
+export { default as PhpLogo } from "./php-logo.png";
+export { default as NestJS } from "./nestJS.png";
+export { default as NextJS } from "./nextJS.png";
+export { default as TypeScript } from "./typescript.png";

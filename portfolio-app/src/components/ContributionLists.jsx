@@ -11,7 +11,10 @@ import {
   MySql,
   Azure,
   MongoLogo,
-  PhpLogo
+  PhpLogo,
+  NestJS,
+  NextJS,
+  TypeScript
 } from "../assets";
 export const companyProjectDescription =
   `Apply Corporate is an application that allow companies to apply to FinXp as their financial payment solution.
@@ -46,7 +49,7 @@ export const experiences = [
     Following development processes is a crucial part of my role, including conducting feature/unit tests, 
     ensuring compatibility with CI/CD processes, and refactoring code that is both reusable 
     and well-structured for future use.`,
-    date: "August 2022 — Present"
+    date: "August 2022 — April 2024"
   },
   {
     logo: Unexus,
@@ -87,12 +90,15 @@ export const experiences = [
 ];
 
 export const skillsData = [
-  { logo: ReactLogo, title: "React", progressValue: 85 },
-  { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
-  { logo: PhpLogo, title: "PHP", progressValue: 65 },
-  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
-  { logo: AngularLogo, title: "Angular", progressValue: 60 },
   { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
+  { logo: ReactLogo, title: "React", progressValue: 85 },
+  {logo: TypeScript, title: "TypeScript", progressValue: 75},
+  {logo: NextJS, title: "NextJS", progressValue: 75},
+  { logo: AngularLogo, title: "Angular", progressValue: 60 },
+  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
+  { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
+  { logo: PhpLogo, title: "PHP", progressValue: 80 },
+  {logo: NestJS, title: "NestJS", progressValue: 75},
   { logo: PostmanLogo, title: "Postman", progressValue: 85 },
   { logo: DockerLogo, title: "Docker", progressValue: 70 },
   { logo: MySql, title: "MySql", progressValue: 65 },
