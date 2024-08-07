@@ -90,19 +90,15 @@ export const experiences = [
 ];
 
 export const skillsData = [
-  { logo: WebLogo, title: "Html CSS JS", progressValue: 85 },
   { logo: ReactLogo, title: "React", progressValue: 85 },
-  {logo: TypeScript, title: "TypeScript", progressValue: 75},
   {logo: NextJS, title: "NextJS", progressValue: 75},
   { logo: AngularLogo, title: "Angular", progressValue: 60 },
-  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
+  {logo: TypeScript, title: "TypeScript", progressValue: 75},
   { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
   { logo: PhpLogo, title: "PHP", progressValue: 80 },
   {logo: NestJS, title: "NestJS", progressValue: 75},
+  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
   { logo: PostmanLogo, title: "Postman", progressValue: 85 },
   { logo: DockerLogo, title: "Docker", progressValue: 70 },
-  { logo: MySql, title: "MySql", progressValue: 65 },
-  { logo: FastApi, title: "Fast API", progressValue: 45 },
-  {logo: Azure, title: "Azure", progressValue: 45},
-  {logo: MongoLogo, title: "MongoDB", progressValue: 45}
+  { logo: MySql, title: "MySql", progressValue: 65 }
 ];
