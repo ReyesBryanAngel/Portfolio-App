@@ -4,17 +4,15 @@ import {
   AngularLogo, 
   LaravelLogo, 
   TailwindLogo, 
-  WebLogo, 
   PostmanLogo,
   DockerLogo,
-  FastApi,
   MySql,
-  Azure,
-  MongoLogo,
   PhpLogo,
   NestJS,
   NextJS,
-  TypeScript
+  TypeScript,
+  Yondu,
+  GTS
 } from "../assets";
 export const companyProjectDescription =
   `Apply Corporate is an application that allow companies to apply to FinXp as their financial payment solution.
@@ -41,36 +39,39 @@ created some of the api flow structure based on the requirements, write unit tes
 
 export const experiences = [
   {
+    logo: Yondu,
+    title: "Full-Stack Software Engineer",
+    company: "Yondu Inc. | Full-time",
+    description: `- Integrate cognito user pool of AWS to the client side of BPI application.
+                  - Build an authorization system with email and phone number verification using CAAS.
+                  - Finish training with NextJS and NestJS.`,
+    date: "April 2024 — Present"
+  },
+  {
     logo: Finxp,
     title: "Fullstack Developer",
-    company: "FinXp Ltd. | Full-time",
-    description: `My job at FinXp involves implementing improvements for Fintech application and Portal Admin systems. My recent project 
-    was creating an Apply Corporate application using React and Laravel. 
-    Following development processes is a crucial part of my role, including conducting feature/unit tests, 
-    ensuring compatibility with CI/CD processes, and refactoring code that is both reusable 
-    and well-structured for future use.`,
+    company: "FinXP Ltd. | Full-time",
+    description: `- Add the Maltese creditor identifier feature to the portal web application.
+                  - Integrate API logic and database model structure for business application requirements.
+                  - Build Apply Corporate application that gathers documents and business information of FinXPs' clients.`,
     date: "August 2022 — April 2024"
   },
   {
     logo: Unexus,
     title: "Software Engineer",
-    company: "Unexus Inc. | Part-time",
-    description: `In my previous role at Unexus, I was responsbile for maintaining and building healthcare applications using 
-    React and Laravel. I also handled bug fixes for existing applications and worked closely with QA and designers 
-    to enhance application performance and usability.`,
-    date: "September 2023 — January 2024"
+    company: "Unexus Inc. | Project based",
+    description: `Build the Newborn Application for saving records of newly birth babies, health statuses, 
+    and tracking of record deliveries.`
   },
+
   {
-    logo: Finxp,
-    title: "Fullstack Developer Intern",
-    company: "FinXp Ltd. | Full-time",
-    description: `During my internship, my responsibility is included attending Angular and Laravel training sessions. 
-    I actively participated in the Business Onboarding API project by designing API model structures, implementing business rules with PHP(Laravel),
-    and documenting newly added API features.
-    Additionally, I developed an Onboarding Application using Angular and Laravel 
-    as part of my internship assessment. Throughout these tasks, I ensured thorough documentation of all newly 
-    implemented features and regulations for the Business Onboarding API.`,
-    date: "August 2022 — November 2023"
+    logo: GTS,
+    title: "Backend Developer",
+    company: "Gametime Solutions Inc. | Project based",
+    description: `- Implement API logic structure of Easy2 and Easy3.
+                  - Integrate balance system, declaration of winners, and identifier of final winners 
+                    with declare correction.
+                  - Implement web socket for real-time data commnunication between clients and server`
   },
   {
     logo: Taskus,

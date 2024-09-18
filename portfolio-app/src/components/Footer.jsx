@@ -10,7 +10,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 const Footer = ({ footer }) => {
     const facebookUrl = 'https://www.facebook.com/lefthandedbryan/';
     const instagramUrl = 'https://www.instagram.com/reyesangelbryan/?hl=en';
-    const linkedInUrl = 'https://www.linkedin.com/in/angel-bryan-reyes-7329331b0/';
+    const linkedInUrl = 'https://www.linkedin.com/in/angel-bryan-reyes-043571244/';
     
     return (
         <>
@@ -18,22 +18,6 @@ const Footer = ({ footer }) => {
                 <div>
                     <div className='mt-5 text-left'>
                         <Typography>
-                            <div className="flex items-center gap-2">
-                                <MailIcon
-                                    fontSize="large"
-                                    color="primary"
-                                    className="rounded-full bg-white p-2"
-                                />
-                                    reyesangelbryan@gmail.com
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <PhoneIcon 
-                                    className="rounded-full bg-white p-2 my-2" 
-                                    fontSize="large" 
-                                    color="primary"
-                                />
-                                +639184067584
-                            </div>
                             <div className="flex items-center gap-2">
                                 <BusinessIcon 
                                     className="rounded-full bg-white p-2 my-2" 

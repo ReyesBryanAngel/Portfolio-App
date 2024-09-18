@@ -30,3 +30,6 @@ export { default as PhpLogo } from "./php-logo.png";
 export { default as NestJS } from "./nestJS.png";
 export { default as NextJS } from "./nextJS.png";
 export { default as TypeScript } from "./typescript.png";
+export { default as Yondu } from "./yondu_logo.jpeg"
+export { default as GTS } from "./gts_logo.jpeg"
+

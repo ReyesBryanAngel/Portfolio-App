@@ -1,7 +1,5 @@
-import { Card, Box, Typography } from "@mui/material";
-import AngularCertificate from "../assets/angular-certificate.png"
-import LaravelCertificate from "../assets/laravel-certificate.png"
-import { CompanyAward, CompanyAwardV2, FinxpAward } from "../assets";
+import {  Box, Typography } from "@mui/material";
+import { CompanyAwardV2, FinxpAward } from "../assets";
 
 const Award = () => {
     return (
