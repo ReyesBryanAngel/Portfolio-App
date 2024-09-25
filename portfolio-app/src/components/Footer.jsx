@@ -19,6 +19,22 @@ const Footer = ({ footer }) => {
                     <div className='mt-5 text-left'>
                         <Typography>
                             <div className="flex items-center gap-2">
+                                <MailIcon
+                                    fontSize="large"
+                                    color="primary"
+                                    className="rounded-full bg-white p-2"
+                                />
+                                    reyesangelbryan@gmail.com
+                            </div>
+                            <div className="flex items-center gap-2 mt-2">
+                                <PhoneIcon 
+                                    className="rounded-full bg-white p-2 my-2" 
+                                    fontSize="large" 
+                                    color="primary"
+                                />
+                                +639184067584
+                            </div>
+                            <div className="flex items-center gap-2">
                                 <BusinessIcon 
                                     className="rounded-full bg-white p-2 my-2" 
                                     fontSize="large"
