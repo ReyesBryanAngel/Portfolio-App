@@ -11,8 +11,10 @@ import {
   NestJS,
   NextJS,
   TypeScript,
-  Yondu,
-  GTS
+  GTS,
+  mongoDB,
+  expressJS,
+  nodeJS
 } from "../assets";
 export const companyProjectDescription =
   `Apply Corporate is an application that allow companies to apply to FinXp as their financial payment solution.
@@ -39,13 +41,13 @@ created some of the api flow structure based on the requirements, write unit tes
 
 export const experiences = [
   {
-    logo: Yondu,
-    title: "Full-Stack Software Engineer",
-    company: "Yondu Inc. | Full-time",
-    description: `- Integrate cognito user pool of AWS to the client side of BPI application.
-                  - Build an authorization system with email and phone number verification using CAAS.
-                  - Finish training with NextJS and NestJS.`,
-    date: "April 2024 — Present"
+    logo: GTS,
+    title: "Backend Developer",
+    company: "Gametime Solutions Inc. | Project based",
+    description: `- Develop the API of 2d and 3d lotto system.
+                  - Integrate balance system, declaration of winners, declare correction and identifier of winners for payout per rounds.
+                  - Implement web socket.io with nodeJS for real time data of player head counts per boards and winning notification for each winners.
+                  -  Utilize PHPUnit for function test cases.`
   },
   {
     logo: Finxp,
@@ -53,25 +55,15 @@ export const experiences = [
     company: "FinXP Ltd. | Full-time",
     description: `- Add the Maltese creditor identifier feature to the portal web application.
                   - Integrate API logic and database model structure for business application requirements.
-                  - Build Apply Corporate application that gathers documents and business information of FinXPs' clients.`,
+                  - Built Apply Corporate application that gathers documents and business information of FinXPs' clients.`,
     date: "August 2022 — April 2024"
   },
   {
     logo: Unexus,
     title: "Software Engineer",
     company: "Unexus Inc. | Project based",
-    description: `Build the Newborn Application for saving records of newly birth babies, health statuses, 
+    description: `Built the Newborn Application for saving records of newly birth babies, health statuses, 
     and tracking of record deliveries.`
-  },
-
-  {
-    logo: GTS,
-    title: "Backend Developer",
-    company: "Gametime Solutions Inc. | Project based",
-    description: `- Implement API logic structure of Easy2 and Easy3.
-                  - Integrate balance system, declaration of winners, and identifier of final winners 
-                    with declare correction.
-                  - Implement web socket for real-time data commnunication between clients and server`
   },
   {
     logo: Taskus,
@@ -91,15 +83,18 @@ export const experiences = [
 ];
 
 export const skillsData = [
-  { logo: ReactLogo, title: "React", progressValue: 85 },
-  {logo: NextJS, title: "NextJS", progressValue: 75},
-  { logo: AngularLogo, title: "Angular", progressValue: 60 },
-  {logo: TypeScript, title: "TypeScript", progressValue: 75},
-  { logo: LaravelLogo, title: "Laravel", progressValue: 85 },
+  { logo: mongoDB, title: "Mongo DB", progressValue: 65 },
+  { logo: expressJS, title: "Express JS", progressValue: 70 },
+  { logo: ReactLogo, title: "React JS", progressValue: 85 },
+  { logo: nodeJS, title: "Node JS", progressValue: 65 },
+  { logo: LaravelLogo, title: "Laravel", progressValue: 80 },
   { logo: PhpLogo, title: "PHP", progressValue: 80 },
-  {logo: NestJS, title: "NestJS", progressValue: 75},
-  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 80 },
+  {logo: NextJS, title: "NextJS", progressValue: 70},
+  { logo: AngularLogo, title: "Angular", progressValue: 60 },
+  {logo: TypeScript, title: "TypeScript", progressValue: 60},
+  {logo: NestJS, title: "NestJS", progressValue: 60},
+  { logo: TailwindLogo, title: "Tailwind CSS", progressValue: 75 },
   { logo: PostmanLogo, title: "Postman", progressValue: 85 },
-  { logo: DockerLogo, title: "Docker", progressValue: 70 },
-  { logo: MySql, title: "MySql", progressValue: 65 }
+  { logo: DockerLogo, title: "Docker", progressValue: 65 },
+  { logo: MySql, title: "MySql", progressValue: 75 }
 ];

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Box, Typography, Tabs, Tab, Card } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { AboutPicV3 } from "../assets";
 import Experiences from "./Experiences";
 import { experiences } from "./ContributionLists";
 
+// eslint-disable-next-line react/prop-types
 const AboutMe = ({ aboutRef }) => {
     return (
         <>

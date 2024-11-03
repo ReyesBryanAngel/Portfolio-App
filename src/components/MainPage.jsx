@@ -120,9 +120,9 @@ const MainPage = () => {
             <AboutMe aboutRef={aboutRef}/>
             <Typography variant="h5" fontWeight="bold" className='pt-20 text-left pb-5'>TECH STACKS</Typography>
             <div ref={skillsRef} className="lg:grid grid-cols-4 gap-10">
-            {skillsData.map((skill, index) => (
-                <Skills key={index} logo={skill.logo} title={skill.title} progressValue={skill.progressValue} />
-            ))}
+                {skillsData.map((skill, index) => (
+                    <Skills key={index} logo={skill.logo} title={skill.title} progressValue={skill.progressValue} />
+                ))}
             </div>
             <Typography variant="h5" fontWeight="bold" className='pt-20 text-left'>PORTFOLIO</Typography>
                 <div ref={projectsRef}>
