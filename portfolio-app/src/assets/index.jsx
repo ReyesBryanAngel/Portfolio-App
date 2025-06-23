@@ -11,7 +11,7 @@ export { default as ApplyCorporate } from "./applycorporate-logo.png";
 export { default as PostmanLogo } from "./postman-logo.png";
 export { default as DockerLogo } from "./docker-logo.png";
 export { default as PortalAdmin } from "./portal-admin.png";
-export { default as NewBorn } from "./newborn-logo.png"
+export { default as NewBorn } from "./newborn-logo.png";
 export { default as AboutPicV3 } from "./about-picV3.jpg";
 export { default as MySql } from "./mysql.png";
 export { default as FastApi } from "./fastapi.png";
@@ -20,7 +20,7 @@ export { default as Finxp } from "./finxp-logo.jpg";
 export { default as Unexus } from "./unexus-logo.png";
 export { default as Taskus } from "./taskus-logo.png";
 export { default as Dynata } from "./dynata-logo.jpg";
-export {default as CompanyAward } from "./company-award.jpg";
+export { default as CompanyAward } from "./company-award.jpg";
 export { default as CompanyAwardV2 } from "./company-awardv2.jpg";
 export { default as FinxpAward } from "./finxp-award.png";
 export { default as PhpLogo } from "./php-logo.png";
@@ -32,4 +32,4 @@ export { default as GTS } from "./gts_logo.jpeg";
 export { default as mongoDB } from "./mongoDB.png";
 export { default as nodeJS } from "./nodeJS.png";
 export { default as expressJS } from "./express.png";
-
+export { default as Fintrack } from "./fintrack.png";

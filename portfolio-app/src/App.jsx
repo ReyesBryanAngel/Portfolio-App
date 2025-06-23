@@ -1,14 +1,21 @@
-
-import MainPage from "./components/MainPage";
-import { GlobalDataProvider } from "./context/globalDataProvider";
-import './App.css'
+import Navbar from "./components-v2/Navbar";
+import HeroSection from "./components-v2/HeroSection";
+import AboutSection from "./components-v2/About";
+import SkillsSection from "./components-v2/SkillsSection";
+import ProjectsSection from "./components-v2/ProjectsSection";
+import Footer from "./components-v2/Footer";
 
 function App() {
   return (
-    <GlobalDataProvider>
-      <MainPage />
-    </GlobalDataProvider>
-  )
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
