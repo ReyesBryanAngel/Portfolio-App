@@ -23,10 +23,10 @@ export default function AboutSection() {
             been honing my skills ever since.
           </p>
           <p className="mt-4">
-            I'm experienced Dev in JavaScript and PHP ecosystems, working with
-            modern frameworks like React, Node.js, and Laravel. I’m committed to
-            writing clean, maintainable code and building scalable applications
-            that solve real-world problems.
+            I'm experienced Developer in JavaScript and PHP ecosystems, working
+            with modern frameworks like React, Node.js, and Laravel. I’m
+            committed to writing clean, maintainable code and building scalable
+            applications that solve real-world problems.
           </p>
           <p className="mt-4">
             When I’m not coding, you’ll find me exploring new technologies, and
