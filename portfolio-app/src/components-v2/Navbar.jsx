@@ -32,6 +32,14 @@ export default function Navbar() {
           Skills
         </Link>
         <Link
+          to="experience"
+          smooth
+          duration={500}
+          className="cursor-pointer hover:text-blue-400"
+        >
+          Experiences
+        </Link>
+        <Link
           to="projects"
           smooth
           duration={500}
