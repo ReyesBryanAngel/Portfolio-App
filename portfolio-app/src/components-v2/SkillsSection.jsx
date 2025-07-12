@@ -4,7 +4,7 @@ const skills = {
     "CSS3",
     "JavaScript",
     "React",
-    "Redux",
+    "TypeScript",
     "Tailwind CSS",
     "Material UI",
   ],

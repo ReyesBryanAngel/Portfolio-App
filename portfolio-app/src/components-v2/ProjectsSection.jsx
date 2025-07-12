@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { ApplyCorporate, PortalAdmin, Fintrack } from "../assets";
-import { Box } from "@mui/material";
+import {
+  Box,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
+} from "@mui/material";
 const applyCorporateLink = "https://apply.finxp.com/";
 const finXPPortalAdminLink = "https://portal-admin.finxp.com/";
 const fintrackLink = "https://financetracker-app.com/";
@@ -8,9 +16,14 @@ const projects = [
   {
     image: Fintrack,
     title: "Finance Tracker App",
-    description:
-      "A modern personal finance management application built to help users track income, expenses, and budgeting goals efficiently. The app features secure user authentication, responsive dashboard analytics with interactive charts, transaction history filtering, and profile customization with photo upload. It supports real-time data updates and ensures data privacy using token-based authentication. The app emphasizes usability, clean design, and practical financial insights for day-to-day money management.",
-    technologies: ["React", "Material UI", "Node.js", "MongoDB", "AWS"],
+    features: [
+      "Secure sign-in and personalized user profiles.",
+      "Automatically notifies users through email about upcoming bills, ensuring they never miss a payment.",
+      "Keep track of bills with custom billing statuses and set them to recur at specified intervals for easy management.",
+      "Monitor user's finances with an intuitive interface featuring Line and Pie Charts for a clear overview of your income and spending",
+      "Automatically logs out inactive users after a set period for added security",
+      "Allows users to upload and display their photo for a personalized experience",
+    ],
     demoColor: "bg-orange-500",
     demoLink: fintrackLink,
     code: fintrackCode,
@@ -20,13 +33,7 @@ const projects = [
     title: "Apply Corporate",
     description:
       "A web application that enables companies to apply to FinXP as their financial payment solution. It features complex API and frontend integrations, including auto-save functionality, document upload/download, conditional form rendering, section-based validation with error tracking, and full field disabling upon submission.",
-    // features: [
-    //   "User authentication and profiles",
-    //   "Product search and filtering",
-    //   "Shopping cart and checkout",
-    //   "Payment gateway integration",
-    //   "Order tracking system",
-    // ],
+
     technologies: ["React", "Laravel", "KeyCloak", "MySQL", "Typescript"],
     demoColor: "bg-blue-500",
     demoLink: applyCorporateLink,
@@ -44,6 +51,19 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const [openModal, setOpenModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setCurrentImage(image);
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setCurrentImage(null);
+  };
+
   return (
     <section id="projects" className="bg-[#0f172a] text-white py-20 px-6">
       <h2 className="text-3xl font-bold text-center mb-10">
@@ -53,32 +73,29 @@ export default function ProjectsSection() {
         {projects?.map((project, index) => (
           <div key={index} className="bg-[#1e293b] p-6 rounded-xl shadow-lg">
             <div
-              className={`w-full h-31 lg:h-32 rounded-t-xl flex items-center justify-center text-3xl text-white`}
+              className={`w-full h-31 lg:h-32 rounded-t-xl flex items-center justify-center text-3xl text-white cursor-pointer`}
+              onClick={() => handleImageClick(project?.image)}
             >
               <Box
                 component="img"
-                sx={{ maxWidth: "100%", height: "auto", width: "600px" }}
+                sx={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  width: "100%",
+                  maxHeight: "200px",
+                  objectFit: "cover",
+                }}
                 src={project?.image}
-                alt="Banner"
+                alt={project?.title}
               />
             </div>
             <h3 className="text-xl font-semibold mt-7">{project?.title}</h3>
             <p className="text-gray-300 mt-2">{project?.description}</p>
-            <ul className="text-sm mt-2 list-disc ml-5 text-gray-400">
+            <ul className="text-sm mt-2 list-disc ml-5">
               {project?.features?.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
-            <div className="flex flex-wrap gap-2 mt-3">
-              {project?.technologies?.map((tech) => (
-                <span
-                  key={tech}
-                  className="bg-blue-900 px-2 py-1 rounded text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
             <div className="flex gap-4 mt-4">
               {!["Apply Corporate", "Maltese Creditor Identifier"]?.includes(
                 project.title
@@ -106,6 +123,30 @@ export default function ProjectsSection() {
           </div>
         ))}
       </div>
+
+      <Dialog open={openModal} onClose={handleCloseModal} fullWidth>
+        <DialogTitle>Project Image</DialogTitle>
+        <DialogContent>
+          {currentImage && (
+            <Box
+              component="img"
+              sx={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "80vh",
+                objectFit: "contain",
+              }}
+              src={currentImage}
+              alt="Project Preview"
+            />
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseModal} color="primary">
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
     </section>
   );
 }
