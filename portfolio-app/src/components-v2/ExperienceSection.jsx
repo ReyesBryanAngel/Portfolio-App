@@ -12,7 +12,7 @@ export default function ExperienceSection() {
       ],
       // description:
       //   "Participated in the frontend development of Spotter.ai’s trucking management system. Collaborated with cross-functional teams to deliver responsive dashboards, fix complex Front end bugs, and develop table templates features with backend integration.",
-      technologies: ["React", "Nest JS", "AWS", "GIT"],
+      technologies: ["React", "NextJS", "Nest JS", "AWS", "GIT"],
     },
     {
       role: "Backend Developer",
