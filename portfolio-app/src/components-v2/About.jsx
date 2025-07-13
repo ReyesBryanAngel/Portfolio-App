@@ -34,7 +34,7 @@ export default function AboutSection() {
           </p>
           <div className="mt-4 flex space-x-4 text-xl">
             <a
-              href={"https://github.com/ReyesBryanAngel"}
+              href={"https://github.com/ReyesBryanAngel/CoderBryan"}
               target="_blank"
               rel="noopener noreferrer"
             >

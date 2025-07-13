@@ -8,7 +8,7 @@ export default function Footer() {
       <p className="mt-2">© 2025 Angel Bryan Reyes. All rights reserved.</p>
       <div className="flex justify-center gap-4 text-lg mt-4">
         <a
-          href={"https://github.com/ReyesBryanAngel"}
+          href={"https://github.com/ReyesBryanAngel/CoderBryan"}
           target="_blank"
           rel="noopener noreferrer"
         >
