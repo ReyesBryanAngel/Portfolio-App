@@ -17,7 +17,7 @@ export default function AboutSection() {
         {/* </div> */}
         <div className="text-gray-300">
           <p>
-            I’m a passionate Full Stack Developer with 3+ years of experience
+            I’m a passionate Full Stack Developer with four years of experience
             crafting web applications that deliver exceptional user experiences.
             My journey in tech began with a Computer Science degree, and I’ve
             been honing my skills ever since.
